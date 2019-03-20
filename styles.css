@@ -1,0 +1,170 @@
+/**{
+	border: 1px solid red;
+}*/
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.frame {
+	height: auto;
+	width: 100%;
+	background-color: #6e6e6e6e;
+	border-radius: 5% 5% 0 0;
+	border: 3px solid #404041;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.circle {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 2px solid #404041;
+	margin-left: 20px;
+	margin-top: 20px;
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: green;
+}
+
+header {
+	display: flex;
+	background-color: #404041;
+	height: auto;
+	align-items: center;
+	flex-direction: column
+
+}
+
+h1 {
+	color: #DD1972;
+	font-size: 67px;
+	font-weight: 700;
+	margin: 10px 0 0;
+
+}
+
+h3 {
+	margin: 20px
+}
+
+
+h2.sub-title {
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: 300;
+	margin: 0 0 10px;
+}
+
+.light-weight-name {
+    font-weight: 300;
+}
+
+main {
+	border: 1px solid black;
+	display: flex;
+}
+
+.left-column {
+	background-color: #f7f7f7;
+	color: #6e6e6e;
+	height: 1000px;
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+}
+
+.right-column {
+	background-color: #D0D2D3;
+	color: #6e6e6e;
+	border-left: 2px solid grey;
+	height: 1000px;
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+}
+
+.range-card,
+.challenger-guess,
+.score-card {
+	width: 700px;
+	height: auto;
+	background-color: #fff;
+	border: 2px solid lightgrey;
+}
+
+.light-weight-range {
+	font-weight: 300;
+}
+
+#show-min-range,
+#show-max-range {
+	text-decoration: underline;
+
+}
+
+.winning-card {
+	width: 650px;
+	height: auto;
+	background-color: #fff;
+	border: 2px solid grey;
+}
+
+.form-range,
+.challenger-1-info,
+.challenger-2-info {
+	display: flex;
+	margin-bottom: 50px;
+
+}
+#update-range{
+	margin-left: 20px;
+
+}
+
+#update-range,
+#button-submit-guess,
+#button-reset-game,
+#button-clear-game {
+	background-color: #6e6e6e;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 10px 40px;
+	border: none;
+	border-radius: 32px;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin: 10px;
+}
+
+.score-card {
+	display: flex;
+	justify-content: space-around;
+
+}
+
+
+.winning-card {
+	text-align: center;
+}
+
+.bottom-winning-card {
+	display: flex;
+	justify-content: space-around;	
+}

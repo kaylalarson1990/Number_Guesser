@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			Number Guesser | Andreea Hanson & Kayla Larson| 1093 FE | Mod 1
+		</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="stylesmobile.css" media="screen and (max-width: 900px)"> -->
+	</head>
+	<body>
+		<div class="frame">
+			<div class="circle red"></div>
+			<div class="circle yellow"></div>
+			<div class="circle green"></div>
+		<header>
+			<h1 class="site-title">NUMBER<span class="light-weight-name">GUESSER</span></h1>
+			<h2 class="sub-title">ULTIMATE CHALLENGER EDITION</h2>
+		</header>
+		<main>
+			<article class='left-column'>
+				<section class='range-card'>
+					<h3>Set Range</h3>
+					<figure class="form-range">
+					<form>
+						<label for="min-range">Min Range</label>
+						<input id="minimum-range" type="text">
+					</form>
+					<form>
+						<label for="max-range">Max Range</label>
+						<input id='maximum-range' type="text">
+					</form>
+					<button id='update-range'>UPDATE</button>
+					</figure>
+				</section>
+
+
+				<section class='challenger-guess'>
+					<h3><span class='light-weight-range'>The Current Range is </span><span id='show-min-range'>1</span><span class='light-weight-range'> to </span><span id='show-max-range'>100</span></h3>
+					<h3>Challenger 1</h3>
+					<figure class='challenger-1-info'>
+					<form>
+						<label for="challenger-1">Name</label>
+						<input id='name-name-1' type="text">
+					</form>
+					<form>
+						<label for="guess-challenger-1">Guess</label>
+						<input id='guess-guess-1' type="text">
+					</form>
+					</figure>
+					<h3>Challenger 2</h3>
+					<figure class='challenger-2-info'>
+					<form>
+						<label for="challenger-2">Name</label>
+						<input id='name-name-2' type="text">
+					</form>
+					<form>
+						<label for="guess-challenger-2">Guess</label>
+						<input id='guess-guess-2' type="text">
+					</form>
+					</figure>
+					<div class='buttons'>
+					<button id='button-submit-guess'>SUBMIT GUESS</button>
+					<button id='button-reset-game'>RESET GAME</button>
+					<button id='button-clear-game'>CLEAR GAME</button>
+					</div>
+				</section>
+					
+					<div class='latest-score'>
+					<section class='score-card'>
+						<h3>Latest  Score</h3>
+					<div class='latest-score-left'>
+						<h3>Challenger 1 <span id='challenger-1-name'>Name<span></h3>
+							<p>current guess</p>
+							<p><span id='most-recent-guess-1'>0</span></p>
+							<p><span id='too-high-too-low-1'>that's too high</span></p>
+					</div>
+					<div class='latest-score-right'>
+						<h3>Challenger 2 <span id='challenger-2-name'>Name<span></h3>
+							<p>current guess</p>
+							<p><span id='most-recent-guess-2'>0</span></p>
+							<p><span id='too-high-too-low-2'>that's too low</span></p>
+					</div>
+				</section>
+					</div>
+			</article>
+
+			<article class='right-column'>
+				<section class='winning-card'>
+					<h3>CHALLENGER 1 <span id='challenger-1-name'>NAME</span> <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>NAME</span></h3>
+					<h2>CHALLENGER <span id='the-winner-id-number'>2</span> <span id='challenger-2-name'>NAME</span></h2>
+					<h2 class='winner'>WINNER</h2>
+					<div class='bottom-winning-card'>
+						<div class='guess-amount'>
+							<h3><span>47</span> GUESSES</h3>
+						</div>
+						<div class='time'>
+							<h3><span>1.35</span> MINUTES</h3>
+						</div>
+						<div class='closing-button'>
+						X
+						</div>
+					</div>
+				</section>
+			</article>
+
+		</main>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
