@@ -14,9 +14,7 @@ updateButton.addEventListener('click', function(e) {
 	updateMaxRange.innerText = maxRange.value;
 	minRange.value = "";
 	maxRange.value = "";
-	if (typeof minRange.value === 'number' && typeof maxRange.value === 'number') {
-		return true;
-	} else {
+	if (typeof minRange !== number && typeof maxRange !== number) {
 		alert('The input you entered is not valid. Please enter a number!')
 	}
 })
@@ -52,9 +50,9 @@ submitGuessButton.addEventListener('click', function(e) {
 	challenger2Name.value = "";
 	guess1.value = "";
 	guess2.value = "";
-	// if (typeof guess1 !== 'number' && typeof guess2 !== 'number') {
-	// 	alert('The input you entered is not valid. Please enter a number!')
-	// }
+	if (typeof guess1 !== number && typeof guess2 !== number) {
+		alert('The input you entered is not valid. Please enter a number!')
+	}
 })
 
 // A button for clearing the input field, which does not reset the random number
