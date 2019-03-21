@@ -74,7 +74,8 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //			return a statement.
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
-})
+})	
+
 
 //Pseudocode Phase One:
 // ZERO STATE
@@ -91,6 +92,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 // . create one button that clears the input values,
 //but does not change the random number.
+
 clearGameButton.addEventListener('click', function clearGame(event) {
 //		a) this button should be disabled if there is nothing
 //			to clear. 
@@ -128,6 +130,20 @@ resetGameButton.addEventListener('click', function resetGame() {
 //			random number.
 	window.location.reload();
 })
+
+
+
+
+// . create one button that resets the whole game and
+//regenerates a new random number
+resetGameButton.addEventListener('click', function resetGame() {
+//		a) this button should be disabled if there is nothing
+//			to clear. 
+//		b) create an if statement that says:
+//			if button is "clicked", clear all fields and 
+//			random number.
+})
+
 
 
 //PLAYERS GUESS STATE

@@ -24,11 +24,11 @@
 					<figure class="form-range">
 					<form>
 						<label for="min-range">Min Range</label>
-						<input id="minimum-range" type="text">
+						<input id="minimum-range" type="number">
 					</form>
 					<form>
 						<label for="max-range">Max Range</label>
-						<input id='maximum-range' type="text">
+						<input id='maximum-range' type="number">
 					</form>
 					<button id='update-range'>UPDATE</button>
 					</figure>
@@ -45,7 +45,7 @@
 					</form>
 					<form>
 						<label for="guess-challenger-1">Guess</label>
-						<input id='guess-guess-1' type="text">
+						<input id='guess-guess-1' type="number">
 					</form>
 					</figure>
 					<h3>Challenger 2</h3>
@@ -56,7 +56,7 @@
 					</form>
 					<form>
 						<label for="guess-challenger-2">Guess</label>
-						<input id='guess-guess-2' type="text">
+						<input id='guess-guess-2' type="number">
 					</form>
 					</figure>
 					<div class='buttons'>
@@ -86,6 +86,38 @@
 			</article>
 
 			<article class='right-column'>
+				<section class='winning-card'>
+					<h3>CHALLENGER 1 <span id='challenger-1-name'>NAME</span> <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>NAME</span></h3>
+					<h2>CHALLENGER <span id='the-winner-id-number'>2</span> <span id='challenger-2-name'>NAME</span></h2>
+					<h2 class='winner'>WINNER</h2>
+					<div class='bottom-winning-card'>
+						<div class='guess-amount'>
+							<h3><span>47</span> GUESSES</h3>
+						</div>
+						<div class='time'>
+							<h3><span>1.35</span> MINUTES</h3>
+						</div>
+						<div class='closing-button'>
+						X
+						</div>
+					</div>
+				</section>
+				<section class='winning-card'>
+					<h3>CHALLENGER 1 <span id='challenger-1-name'>NAME</span> <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>NAME</span></h3>
+					<h2>CHALLENGER <span id='the-winner-id-number'>2</span> <span id='challenger-2-name'>NAME</span></h2>
+					<h2 class='winner'>WINNER</h2>
+					<div class='bottom-winning-card'>
+						<div class='guess-amount'>
+							<h3><span>47</span> GUESSES</h3>
+						</div>
+						<div class='time'>
+							<h3><span>1.35</span> MINUTES</h3>
+						</div>
+						<div class='closing-button'>
+						X
+						</div>
+					</div>
+				</section>
 				<section class='winning-card'>
 					<h3>CHALLENGER 1 <span id='challenger-1-name'>NAME</span> <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>NAME</span></h3>
 					<h2>CHALLENGER <span id='the-winner-id-number'>2</span> <span id='challenger-2-name'>NAME</span></h2>

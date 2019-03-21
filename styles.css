@@ -108,6 +108,10 @@ main {
 	font-weight: 300;
 }
 
+input {
+	margin-top: 20px;
+}
+
 #show-min-range,
 #show-max-range {
 	text-decoration: underline;
