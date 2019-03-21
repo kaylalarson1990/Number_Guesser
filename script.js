@@ -108,6 +108,8 @@ clearGameButton.addEventListener('click', function clearGame(event) {
    	guess2.value = "";
 
    	// FIND A SOLUTION TO SET TO DEFAULT THE "LATEST SCORE CARD TOO"
+   	//use innerText for <p>
+   	// if input => value attribute
    	updateChallenger1Name
     updateChallenger2Name
     updateChallenger1Guess
