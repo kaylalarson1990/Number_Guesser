@@ -64,6 +64,9 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 // . display results from players guesses:
 //		a) if the players guess is too high, 
 //			return a statement.
+	enableButtons();
+
+
 	if (parseInt(c1Guess) === randomNumber) {
 		challenger1Results.innerHTML = "BOOM!";
 		winningCard.innerHTML = `<h3>CHALLENGER 1 
@@ -158,16 +161,16 @@ clearGameButton.addEventListener('click', function clearGame(event) {
    	challenger2Results.value = "";
    	guess1.value = "";
    	guess2.value = "";
-
-   	// FIND A SOLUTION TO SET TO DEFAULT THE "LATEST SCORE CARD TOO"
-   	//use innerText for <p>
-   	// if input => value attribute
-   	updateChallenger1Name
-    updateChallenger2Name
-    updateChallenger1Guess
-    updateChallenger2Guess
+   	updateChallenger1Name.innerText = "Name";
+    updateChallenger2Name.innerText = "Name";
+    updateChallenger1Guess.innerText = "0";
+    updateChallenger2Guess.innerText = "0";
+    // THIS DOESN'T WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // clearGameButton.disabled = true;
+    // resetGameButton.disabled = true;
+    disableButtons();
     event.preventDefault();
-})
+});
 
 
 // . create one button that resets the whole game and
@@ -179,21 +182,20 @@ resetGameButton.addEventListener('click', function resetGame() {
 //			if button is "clicked", clear all fields and 
 //			random number.
 	window.location.reload();
-})
+  disableButtons();
+});
 
 
 
+function disableButtons() {
+    clearGameButton.disabled = true;
+    resetGameButton.disabled = true;
+};
 
-// . create one button that resets the whole game and
-//regenerates a new random number
-resetGameButton.addEventListener('click', function resetGame() {
-//		a) this button should be disabled if there is nothing
-//			to clear. 
-//		b) create an if statement that says:
-//			if button is "clicked", clear all fields and 
-//			random number.
-	window.location.reload();
-})
+function enableButtons() {
+    clearGameButton.disabled = false;
+    resetGameButton.disabled = false;
+};
 
 
 
