@@ -133,6 +133,10 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 })	
 
 
+//Pseudocode Phase One:
+// ZERO STATE
+
+
 
 
 
@@ -156,6 +160,8 @@ clearGameButton.addEventListener('click', function clearGame(event) {
    	guess2.value = "";
 
    	// FIND A SOLUTION TO SET TO DEFAULT THE "LATEST SCORE CARD TOO"
+   	//use innerText for <p>
+   	// if input => value attribute
    	updateChallenger1Name
     updateChallenger2Name
     updateChallenger1Guess
@@ -174,6 +180,21 @@ resetGameButton.addEventListener('click', function resetGame() {
 //			random number.
 	window.location.reload();
 })
+
+
+
+
+// . create one button that resets the whole game and
+//regenerates a new random number
+resetGameButton.addEventListener('click', function resetGame() {
+//		a) this button should be disabled if there is nothing
+//			to clear. 
+//		b) create an if statement that says:
+//			if button is "clicked", clear all fields and 
+//			random number.
+	window.location.reload();
+})
+
 
 
 //PLAYERS GUESS STATE
