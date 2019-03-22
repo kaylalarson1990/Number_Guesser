@@ -122,7 +122,7 @@ input {
 	width: 650px;
 	height: auto;
 	background-color: #fff;
-	border: 2px solid grey;
+	/*border: 2px solid grey;*/
 }
 
 .form-range,
@@ -171,4 +171,8 @@ input {
 .bottom-winning-card {
 	display: flex;
 	justify-content: space-around;	
+}
+
+.error-number {
+	display: block;
 }
