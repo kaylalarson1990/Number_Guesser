@@ -18,8 +18,15 @@ var updateChallenger1Guess = document.querySelector('#most-recent-guess-1');
 var updateChallenger2Guess = document.querySelector('#most-recent-guess-2');
 var challenger1Results = document.querySelector('#too-high-too-low-1');
 var challenger2Results = document.querySelector('#too-high-too-low-2');
-var randomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(randomNumber);
+var winningCard = document.querySelector('.winning-card');
+//creating random number
+var randomNumber = 0;
+
+function randomNumFunc (min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min)) + min;
+}
 // . create two inputs that takes one min range number 
 //and one max range number.
 // . create one button that updates the custom range of 
@@ -30,9 +37,10 @@ updateButton.addEventListener('click', function getRanges() {
 	updateMinRange.innerHTML = changeMinRange;
 	// console.log(maxRange.value)
 	var changeMaxRange = maxRange.value;
-	updateMaxRange.innerHTML = changeMaxRange;	
+	updateMaxRange.innerHTML = changeMaxRange;
+	randomNumber = randomNumFunc(changeMinRange, changeMaxRange);
+	console.log(randomNumber);
 })
-
 // . create one button that submits the players guesses.
 //			i) link the button "click" to submit to correct places.
 submitGuessButton.addEventListener('click', function challengerInfo() {
@@ -56,9 +64,24 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 // . display results from players guesses:
 //		a) if the players guess is too high, 
 //			return a statement.
-
 	if (parseInt(c1Guess) === randomNumber) {
-		challenger1Results.innerHTML = "BOOM!"
+		challenger1Results.innerHTML = "BOOM!";
+		winningCard.innerHTML = `<h3>CHALLENGER 1 
+			<span id='challenger-1-name'>${challenger1Name.value}</span> 
+			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
+			${challenger2Name.value}</span></h3>
+			<h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
+			<span id='challenger-2-name'>${challenger1Name.value}</span></h2>
+			<h2 class='winner'>WINNER</h2>
+			<div class='bottom-winning-card'>
+			<div class='guess-amount'>
+			<h3><span>47</span> GUESSES</h3>
+			</div>
+			<div class='time'>
+			<h3><span>1.35</span> MINUTES</h3>
+			</div>
+			<div class='closing-button'>X</div>
+			</div>`;
 	} else if (parseInt(c1Guess) > randomNumber) {
 		challenger1Results.innerHTML = "That's too high!"
 	} else {
@@ -74,6 +97,39 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //			return a statement.
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
+
+	if (parseInt(c2Guess) === randomNumber) {
+		challenger2Results.innerHTML = "BOOM!";
+		winningCard.innerHTML = `<h3>CHALLENGER 1 
+			<span id='challenger-1-name'>${challenger1Name.value}</span> 
+			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
+			${challenger2Name.value}</span></h3>
+			<h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
+			<span id='challenger-2-name'>${challenger2Name.value}</span></h2>
+			<h2 class='winner'>WINNER</h2>
+			<div class='bottom-winning-card'>
+			<div class='guess-amount'>
+			<h3><span>47</span> GUESSES</h3>
+			</div>
+			<div class='time'>
+			<h3><span>1.35</span> MINUTES</h3>
+			</div>
+			<div class='closing-button'>X</div>
+			</div>`;
+	} else if (parseInt(c2Guess) > randomNumber) {
+		challenger2Results.innerHTML = "That's too high!"
+	} else {
+		challenger2Results.innerHTML = "That's too low!"
+	}
+
+//player guesses should only fall between min and max range
+
+//if player 1 guess is greater than the max or less than the min, return an error
+	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
+		console.log('try again');
+	}
+//if player 2 guess is greater than the max or less than the min, return an error
+	
 })	
 
 
@@ -81,18 +137,12 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 // ZERO STATE
 
 
-// . for each player, create two things:
-//		a) an input field to enter their number guesses,
-//			which can only accept numerical values.
 
-//		b) an input field for their name.
-//			i) link players name to show in correct places 
-//				(i.e Current Range card, winning cards, etc.)
+
 
 
 // . create one button that clears the input values,
 //but does not change the random number.
-
 clearGameButton.addEventListener('click', function clearGame(event) {
 //		a) this button should be disabled if there is nothing
 //			to clear. 
@@ -142,6 +192,7 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
+	window.location.reload();
 })
 
 
@@ -164,6 +215,16 @@ resetGameButton.addEventListener('click', function resetGame() {
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
 
+	// if a player wins, add innerHTML to DOM
+
+
+	//if challenger 1 wins, we need to update two things:
+	// 1. their name on the winning card
+	// 2. their guess on the winning card
+
+	//if challenger 2 wins, we need to update two things:
+	// 1. their name on the winning card
+	// 2. their guess on the winning card
 
 
 
