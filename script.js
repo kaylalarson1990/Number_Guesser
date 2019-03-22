@@ -19,6 +19,7 @@ var updateChallenger2Guess = document.querySelector('#most-recent-guess-2');
 var challenger1Results = document.querySelector('#too-high-too-low-1');
 var challenger2Results = document.querySelector('#too-high-too-low-2');
 var winningCard = document.querySelector('.winning-card');
+var errorNum = document.querySelector('.error-number');
 //creating random number
 var randomNumber = 0;
 
@@ -129,9 +130,12 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 //if player 1 guess is greater than the max or less than the min, return an error
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
-		console.log('try again');
+		errorNum.innerHTML = 'Pick a number within the range';
 	}
 //if player 2 guess is greater than the max or less than the min, return an error
+	if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
+		errorNum.innerHTML = 'Pick a number within the range';
+	}
 	
 })	
 
