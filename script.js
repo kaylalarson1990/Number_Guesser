@@ -18,8 +18,12 @@ var updateChallenger1Guess = document.querySelector('#most-recent-guess-1');
 var updateChallenger2Guess = document.querySelector('#most-recent-guess-2');
 var challenger1Results = document.querySelector('#too-high-too-low-1');
 var challenger2Results = document.querySelector('#too-high-too-low-2');
+var winningCard = document.querySelector('.winning-card');
+//creating random number
 var randomNumber = Math.floor(Math.random() * 100) + 1;
 console.log(randomNumber);
+
+
 // . create two inputs that takes one min range number 
 //and one max range number.
 // . create one button that updates the custom range of 
@@ -59,6 +63,22 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 	if (parseInt(c1Guess) === randomNumber) {
 		challenger1Results.innerHTML = "BOOM!"
+		winningCard.innerHTML = `<h3>CHALLENGER 1 
+			<span id='challenger-1-name'>${challenger1Name.value}</span> 
+			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
+			${challenger2Name.value}</span></h3>
+			<h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
+			<span id='challenger-2-name'>${challenger2Name.value}</span></h2>
+			<h2 class='winner'>WINNER</h2>
+			<div class='bottom-winning-card'>
+			<div class='guess-amount'>
+			<h3><span>47</span> GUESSES</h3>
+			</div>
+			<div class='time'>
+			<h3><span>1.35</span> MINUTES</h3>
+			</div>
+			<div class='closing-button'>X</div>
+			</div>`;
 	} else if (parseInt(c1Guess) > randomNumber) {
 		challenger1Results.innerHTML = "That's too high!"
 	} else {
@@ -74,6 +94,31 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //			return a statement.
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
+
+	if (parseInt(c2Guess) === randomNumber) {
+		challenger2Results.innerHTML = "BOOM!"
+		winningCard.innerHTML = `<h3>CHALLENGER 1 
+			<span id='challenger-1-name'>${challenger1Name.innerText}</span> 
+			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>${challenger2Name.innerText}</span>
+			</h3>
+				<h2>CHALLENGER <span id='the-winner-id-number'>2</span> <span id='challenger-2-name'>${challenger2Name.innerText}</span></h2>
+				<h2 class='winner'>WINNER</h2>
+				<div class='bottom-winning-card'>
+					<div class='guess-amount'>
+						<h3><span>47</span> GUESSES</h3>
+						</div>
+						<div class='time'>
+							<h3><span>1.35</span> MINUTES</h3>
+						</div>
+						<div class='closing-button'>
+						X
+						</div>
+					</div>`;
+	} else if (parseInt(c2Guess) > randomNumber) {
+		challenger2Results.innerHTML = "That's too high!"
+	} else {
+		challenger2Results.innerHTML = "That's too low!"
+	}
 })	
 
 //Pseudocode Phase One:
@@ -89,15 +134,35 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //				(i.e Current Range card, winning cards, etc.)
 
 
+	
+
+
+
+
 // . create one button that clears the input values,
 //but does not change the random number.
-clearGameButton.addEventListener('click', function clearGame() {
+clearGameButton.addEventListener('click', function clearGame(event) {
 //		a) this button should be disabled if there is nothing
 //			to clear. 
 //		b) link the button "click" to submit to correct places.
 //		c) create an if statement that says:
 //			if button is "clicked", clear all elements, but do not
 //			change the random number.
+    minRange.value = "";
+    maxRange.value = "";
+    challenger1Name.value = "";
+    challenger2Name.value = "";
+    challenger1Results.value = "";
+   	challenger2Results.value = "";
+   	guess1.value = "";
+   	guess2.value = "";
+
+   	// FIND A SOLUTION TO SET TO DEFAULT THE "LATEST SCORE CARD TOO"
+   	updateChallenger1Name
+    updateChallenger2Name
+    updateChallenger1Guess
+    updateChallenger2Guess
+    event.preventDefault();
 })
 
 
@@ -109,6 +174,7 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
+	window.location.reload();
 })
 
 
@@ -130,6 +196,16 @@ resetGameButton.addEventListener('click', function resetGame() {
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
 
+	// if a player wins, add innerHTML to DOM
+
+
+	//if challenger 1 wins, we need to update two things:
+	// 1. their name on the winning card
+	// 2. their guess on the winning card
+
+	//if challenger 2 wins, we need to update two things:
+	// 1. their name on the winning card
+	// 2. their guess on the winning card
 
 
 
