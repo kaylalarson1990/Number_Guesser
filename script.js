@@ -76,6 +76,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //				HTML that needs to be changed.
 })	
 
+
 //Pseudocode Phase One:
 // ZERO STATE
 
@@ -91,13 +92,31 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 // . create one button that clears the input values,
 //but does not change the random number.
-clearGameButton.addEventListener('click', function clearGame() {
+
+clearGameButton.addEventListener('click', function clearGame(event) {
 //		a) this button should be disabled if there is nothing
 //			to clear. 
 //		b) link the button "click" to submit to correct places.
 //		c) create an if statement that says:
 //			if button is "clicked", clear all elements, but do not
 //			change the random number.
+    minRange.value = "";
+    maxRange.value = "";
+    challenger1Name.value = "";
+    challenger2Name.value = "";
+    challenger1Results.value = "";
+   	challenger2Results.value = "";
+   	guess1.value = "";
+   	guess2.value = "";
+
+   	// FIND A SOLUTION TO SET TO DEFAULT THE "LATEST SCORE CARD TOO"
+   	//use innerText for <p>
+   	// if input => value attribute
+   	updateChallenger1Name
+    updateChallenger2Name
+    updateChallenger1Guess
+    updateChallenger2Guess
+    event.preventDefault();
 })
 
 
@@ -109,7 +128,22 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
+	window.location.reload();
 })
+
+
+
+
+// . create one button that resets the whole game and
+//regenerates a new random number
+resetGameButton.addEventListener('click', function resetGame() {
+//		a) this button should be disabled if there is nothing
+//			to clear. 
+//		b) create an if statement that says:
+//			if button is "clicked", clear all fields and 
+//			random number.
+})
+
 
 
 //PLAYERS GUESS STATE
