@@ -19,7 +19,8 @@ var updateChallenger2Guess = document.querySelector('#most-recent-guess-2');
 var challenger1Results = document.querySelector('#too-high-too-low-1');
 var challenger2Results = document.querySelector('#too-high-too-low-2');
 var winningCard = document.querySelector('.winning-card');
-var errorNum = document.querySelector('.error-number');
+var errorNum1 = document.querySelector('.error-number1');
+var errorNum2 = document.querySelector('.error-number2');
 //creating random number
 var randomNumber = 0;
 
@@ -130,13 +131,16 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 //if player 1 guess is greater than the max or less than the min, return an error
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
-		errorNum.innerHTML = 'Pick a number within the range';
+		errorNum1.innerHTML = 'Pick a number within the range';
+	} else {
+		errorNum1.innerHTML = '';
 	}
 //if player 2 guess is greater than the max or less than the min, return an error
 	if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
-		errorNum.innerHTML = 'Pick a number within the range';
+		errorNum2.innerHTML = 'Pick a number within the range';
+	} else {
+		errorNum2.innerHTML = '';
 	}
-	
 })	
 
 
@@ -203,46 +207,9 @@ function enableButtons() {
 
 
 
-//PLAYERS GUESS STATE
-// . display both players most recent guesses.
-//		a) create an innerHTML to link to HTML that needs to be
-//			changed.
-// . display results from players guesses:
-//		a) if the players guess is too high, 
-//			return a statement.
-//			i) will need to create an innerHTML to link to
-//				HTML that needs to be changed.
-//		b) if the players guess is too low, 
-//			return a statement.
-//			i) will need to create an innerHTML to link to
-//				HTML that needs to be changed.
-//		c) if the players guess matches the number, 
-//			return a statement.
-//			i) will need to create an innerHTML to link to
-//				HTML that needs to be changed.
-
-	// if a player wins, add innerHTML to DOM
-
-
-	//if challenger 1 wins, we need to update two things:
-	// 1. their name on the winning card
-	// 2. their guess on the winning card
-
-	//if challenger 2 wins, we need to update two things:
-	// 1. their name on the winning card
-	// 2. their guess on the winning card
 
 
 
-//minRange needs to be less than maxRange
-// else if statement
-//most specific thing first
 
-//pseudocode:
-//check if values are filled in first
-//then compare the numbers
-//after they fill out the numbers - alert if incorrect
-//the minimun range should be less than the max range
-//if not, then alert user to pick a lower number
 
 
