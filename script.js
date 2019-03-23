@@ -92,6 +92,11 @@ updateButton.addEventListener('click', function getRanges() {
 
 
 })
+
+function adjustRangesUponWin() {
+	updateMinRange.innerHTML -= 10;
+	updateMaxRange.innerHTML += 10;
+}
 // . create one button that submits the players guesses.
 //			i) link the button "click" to submit to correct places.
 submitGuessButton.addEventListener('click', function challengerInfo() {
@@ -107,14 +112,6 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 	// console.log(guess2.value)
 	var c2Guess = guess2.value;
 	
-//	i) link players guess to show on Current Range card
-
-// . display both players most recent guesses.
-//		a) create an innerHTML to link to HTML that needs to be
-//			changed.
-// . display results from players guesses:
-//		a) if the players guess is too high, 
-//			return a statement.
 	enableButtons();
 
 
@@ -136,6 +133,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			</div>
 			<div class='closing-button'>X</div>
 			</div>`;
+			adjustRangesUponWin()
 	} else if (parseInt(c1Guess) > randomNumber) {
 		challenger1Results.innerHTML = "That's too high!"
 	} else {
@@ -172,6 +170,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			</div>
 			<div class='closing-button'></div>
 			</div>`;
+			adjustRangesUponWin()
 	} else if (parseInt(c2Guess) > randomNumber) {
 		challenger2Results.innerHTML = "That's too high!"
 	} else {
