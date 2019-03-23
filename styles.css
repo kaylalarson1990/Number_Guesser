@@ -3,6 +3,8 @@ body {
 	font-family: "Open Sans", sans-serif;
 }
 
+
+
 .frame {
 	height: auto;
 	width: 100%;
@@ -49,6 +51,18 @@ h1 {
 	font-weight: 800;
 	margin: 10px 0 0;
 
+}
+
+h2 {
+	font-size: 3em;
+}
+
+.section-2-winning-card {
+	margin: 10px;
+}
+
+h2.winner {
+	font-weight: 300;
 }
 
 
@@ -129,9 +143,10 @@ input {
 .challenger-1-info,
 .challenger-2-info {
 	display: flex;
-	margin-bottom: 50px;
-
+	flex: auto;
+	flex-flow: row wrap;
 }
+
 #update-range{
 	margin-left: 20px;
 
@@ -173,13 +188,29 @@ input {
 	justify-content: space-around;	
 }
 
-.error-number {
+.error-number1,
+.error-number2 {
 	display: block;
+	font-size: 15px;
+	color: #DD1972;
 }
 
+.greater-than-max-error,
+.less-than-min-error {
+	flex-wrap: wrap;
+	font-size: 15px;
+	color: #DD1972;
+}
 
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
+	font-weight: 700;
+}
 
-
+/*// ----------- //*/
 
 @media screen and (max-width: 1224px) {
 
@@ -335,8 +366,8 @@ input {
 	justify-content: center;
 	flex-direction: column;
 	margin-bottom: 50px;
-
 }
+
 #update-range{
 	margin-left: 20px;
 	width: 200px;
@@ -370,6 +401,10 @@ input {
 	margin: 10px;
 }
 
+.section-1-winning-card {
+	justify-content: space-between;
+}
+
 .score-card {
 	width: 100%;
 	display: flex;
@@ -381,7 +416,7 @@ input {
 .latest-score-left
 .latest-score-right {
 	display: flex;
-	flex-flow: column;
+	flex-flow: row wrap;
 	justify-content: center;
 	width: 100%;
 }
@@ -817,10 +852,10 @@ input {
 
 }
 
-/*#update-range,
-/*#button-submit-guess,
+#update-range,
+#button-submit-guess,
 #button-reset-game,
-#button-clear-game */{
+#button-clear-game {
 	background-color: #6e6e6e;
 	color: #ffffff;
 	font-weight: 700;
@@ -830,7 +865,7 @@ input {
 	border-radius: 32px;
 	margin-top: 20px;
 	margin-left: 0;
-}*/
+}
 
 .buttons,
 #update-range {

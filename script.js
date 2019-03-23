@@ -21,6 +21,11 @@ var challenger2Results = document.querySelector('#too-high-too-low-2');
 var winningCard = document.querySelector('.winning-card');
 var errorNum1 = document.querySelector('.error-number1');
 var errorNum2 = document.querySelector('.error-number2');
+var greaterThanMax = document.querySelector('.greater-than-max-error');
+var lessThanMin = document.querySelector('.less-than-min-error');
+var guess1NaN = document.querySelector('.nan-guess-1');
+var guess2NaN = document.querySelector('.nan-guess-2');
+
 //creating random number
 var randomNumber = 0;
 
@@ -42,6 +47,26 @@ updateButton.addEventListener('click', function getRanges() {
 	updateMaxRange.innerHTML = changeMaxRange;
 	randomNumber = randomNumFunc(changeMinRange, changeMaxRange);
 	console.log(randomNumber);
+
+	//display an error if max range is less than min range
+	if(parseInt(changeMaxRange) < parseInt(changeMinRange)) {
+		lessThanMin.innerHTML = 'Please choose a number greater than the min range.'
+	} else {
+		lessThanMin.innerHTML = '';
+	}
+
+	//display an error if min range is greater than max range
+	if(parseInt(changeMinRange) > parseInt(changeMaxRange)) {
+		greaterThanMax.innerHTML = 'Please choose a number less than the max range.'
+	} else {
+		greaterThanMax.innerHTML = '';
+	}
+	//display an error if either range is not a number (NaN)
+
+
+	//display an error if button is clicked but no value
+
+
 })
 // . create one button that submits the players guesses.
 //			i) link the button "click" to submit to correct places.
@@ -67,6 +92,16 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //		a) if the players guess is too high, 
 //			return a statement.
 	enableButtons();
+
+	//display an error if either guess is not a number (NaN)
+	if(isNaN(c1Guess)) {
+		guess1NaN.innerHTML = 'Please enter a valid number.';
+	}
+	//display an error if button is clicked but no value
+	if(!isNaN(parseInt(c2Guess))) {
+		guess2NaN.innerHTML = 'Please enter a valid number.';
+	}
+
 
 
 	if (parseInt(c1Guess) === randomNumber) {
@@ -105,12 +140,14 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 	if (parseInt(c2Guess) === randomNumber) {
 		challenger2Results.innerHTML = "BOOM!";
-		winningCard.innerHTML = `<h3>CHALLENGER 1 
+		winningCard.innerHTML = `<div class="section-1-winning-card">
+			<h3>CHALLENGER 1 
 			<span id='challenger-1-name'>${challenger1Name.value}</span> 
 			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
-			${challenger2Name.value}</span></h3>
+			${challenger2Name.value}</span></div></h3>
+			<div class="section-2-winning-card">
 			<h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
-			<span id='challenger-2-name'>${challenger2Name.value}</span></h2>
+			<span id='challenger-2-name'>${challenger2Name.value}</span></div></h2>
 			<h2 class='winner'>WINNER</h2>
 			<div class='bottom-winning-card'>
 			<div class='guess-amount'>
@@ -119,7 +156,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			<div class='time'>
 			<h3><span>1.35</span> MINUTES</h3>
 			</div>
-			<div class='closing-button'>X</div>
+			<div class='closing-button'></div>
 			</div>`;
 	} else if (parseInt(c2Guess) > randomNumber) {
 		challenger2Results.innerHTML = "That's too high!"
@@ -129,13 +166,13 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 //player guesses should only fall between min and max range
 
-//if player 1 guess is greater than the max or less than the min, return an error
+//if player 1 guess is greater than the max or less than the min range, return an error
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
 		errorNum1.innerHTML = 'Pick a number within the range';
 	} else {
 		errorNum1.innerHTML = '';
 	}
-//if player 2 guess is greater than the max or less than the min, return an error
+//if player 2 guess is greater than the max or less than the min range, return an error
 	if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
 		errorNum2.innerHTML = 'Pick a number within the range';
 	} else {
