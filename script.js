@@ -40,33 +40,41 @@ function randomNumFunc (min, max) {
 updateButton.addEventListener('click', function getRanges() {
 	// console.log(minRange.value)
 	var changeMinRange = minRange.value;
-	updateMinRange.innerHTML = changeMinRange;
+	
 	// console.log(maxRange.value)
 	var changeMaxRange = maxRange.value;
-	updateMaxRange.innerHTML = changeMaxRange;
+	
 	randomNumber = randomNumFunc(changeMinRange, changeMaxRange);
 	console.log(randomNumber);
 
 	//display an error if max range is less than min range
 
-	if(parseInt(changeMaxRange) < parseInt(changeMinRange)) {
-		errorNum2.innerHTML = 'Please choose a number greater than the min range.';
-	} else if (changeMaxRange === '') {
-		errorNum2.innerHTML = 'Please enter valid entry.';
-	} else {
-		errorNum2.innerHTML = '';
-	}
+	if(parseInt(changeMaxRange) <= parseInt(changeMinRange)) {
+        errorNum2.innerHTML = 'Please choose a number greater than the min range.';
+    } else if (changeMaxRange === '') {
+        errorNum2.innerHTML = 'Please enter valid entry.';
+    } else if (isNaN(parseInt(changeMaxRange))) {
+        errorNum2.innerHTML = "Please enter a valid number"
+    } else {
+        errorNum2.innerHTML = '';
+        updateMaxRange.innerHTML = changeMaxRange;
+    }
+
 	
 
 	//display an error if min range is greater than max range
-	if(parseInt(changeMinRange) > parseInt(changeMaxRange)) {
-		errorNum1.innerHTML = 'Please choose a number less than the max range.';
-	} else if (changeMinRange === '') {
-		errorNum1.innerHTML = 'Please enter a valid entry.';
-	} else {
-		errorNum1.innerHTML = '';
-	}
+	if(parseInt(changeMinRange) >= parseInt(changeMaxRange)) {
+        errorNum1.innerHTML = 'Please choose a number less than the max range.';
+    } else if (changeMinRange === '') {
+        errorNum1.innerHTML = 'Please enter a valid entry.';
+    } else if (isNaN(parseInt(changeMinRange))) {
+        errorNum1.innerHTML = "Please enter a valid number"
+    } else {
+        errorNum1.innerHTML = '';
+        updateMinRange.innerHTML = changeMinRange;
+    }
 	//display an error if either range is not a number (NaN)
+
 
 
 	// //display an error if button is clicked but no value
@@ -95,10 +103,10 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 	updateChallenger2Name.innerHTML = c2Name;
 	// console.log(guess1.value)
 	var c1Guess = guess1.value;
-	updateChallenger1Guess.innerHTML = c1Guess;
+	
 	// console.log(guess2.value)
 	var c2Guess = guess2.value;
-	updateChallenger2Guess.innerHTML = c2Guess;
+	
 //	i) link players guess to show on Current Range card
 
 // . display both players most recent guesses.
@@ -174,29 +182,26 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 //if player 1 guess is greater than the max or less than the min range, return an error
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
-		errorNum1.innerHTML = 'Pick a number within the range';
-	} else {
-		errorNum1.innerHTML = '';
-	}
+        guessError1.innerHTML = 'Pick a number within the range';
+    } else if (c1Guess === '') {
+        guessError1.innerHTML = 'Please pick a valid entry.'
+    } else if (isNaN(parseInt(c1Guess))) {
+    	guessError1.innerHTML = "Please pick a valid number"
+    } else {
+        guessError1.innerHTML = '';
+        updateChallenger1Guess.innerHTML = c1Guess;
+    }
 //if player 2 guess is greater than the max or less than the min range, return an error
-	if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
-		errorNum2.innerHTML = 'Pick a number within the range';
-	} else {
-		errorNum2.innerHTML = '';
-	}
-
-	//display an error if button is clicked but no value
-	if(c1Guess === '') {
-		errorNum1.innerHTML = 'Please pick a valid entry.'
-	} else {
-		errorNum1.innerHTML = '';
-	}
-
-	if(c2Guess === '') {
-		errorNum2.innerHTML = 'Please pick a valid entry.';
-	} else {
-		errorNum2.innerHTML = '';
-	}
+    if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
+        guessError2.innerHTML = 'Pick a number within the range';
+    } else if (c2Guess === '') {
+        guessError2.innerHTML = 'Please pick a valid entry.';
+    } else if (isNaN(parseInt(c2Guess))) {
+    	guessError2.innerHTML = "Please pick a valid number"
+    } else {
+        guessError2.innerHTML = '';
+        updateChallenger2Guess.innerHTML = c2Guess;
+    }
 	// //display an error if either guess is not a number (NaN)
 	// if(isNaN(c1Guess)) {
 	// 	guess1NaN.innerHTML = 'Please enter a valid number.';
@@ -253,8 +258,21 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
-	window.location.reload();
-  disableButtons();
+	  minRange.value = "";
+    maxRange.value = "";
+    challenger1Name.value = "";
+    challenger2Name.value = "";
+    challenger1Results.value = "";
+   	challenger2Results.value = "";
+   	guess1.value = "";
+   	guess2.value = "";
+   	updateChallenger1Name.innerText = "Name";
+    updateChallenger2Name.innerText = "Name";
+    updateChallenger1Guess.innerText = "0";
+    updateChallenger2Guess.innerText = "0";
+    event.preventDefault();
+    winningCard.innerHTML = "";
+    randomNumFunc();
 });
 
 
