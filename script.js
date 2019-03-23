@@ -258,7 +258,7 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
-	  minRange.value = "";
+	minRange.value = "";
     maxRange.value = "";
     challenger1Name.value = "";
     challenger2Name.value = "";
@@ -270,6 +270,8 @@ resetGameButton.addEventListener('click', function resetGame() {
     updateChallenger2Name.innerText = "Name";
     updateChallenger1Guess.innerText = "0";
     updateChallenger2Guess.innerText = "0";
+    updateMinRange.innerText = "--"
+    updateMaxRange.innerText = "--"
     event.preventDefault();
     winningCard.innerHTML = "";
     randomNumFunc();
