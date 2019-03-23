@@ -188,15 +188,15 @@ input {
 	justify-content: space-around;	
 }
 
-.error-number1,
-.error-number2 {
+/*.min-range,
+.max-range {
 	display: block;
 	font-size: 15px;
 	color: #DD1972;
-}
+}*/
 
-.greater-than-max-error,
-.less-than-min-error {
+.min-error,
+.max-error {
 	flex-wrap: wrap;
 	font-size: 15px;
 	color: #DD1972;
