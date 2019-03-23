@@ -1,6 +1,4 @@
-/**{
-	border: 1px solid red;
-}*/
+
 body {
 	font-family: "Open Sans", sans-serif;
 }
@@ -183,13 +181,6 @@ input {
 
 
 
-
-
-
-
-
-
-
 @media screen and (max-width: 1224px) {
 
 body {
@@ -241,8 +232,8 @@ header {
 h1 {
 	color: #DD1972;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 2rem;
-	font-weight: 800;
+	font-size: 2em;
+	font-weight: 700;
 	margin: 10px 0 0;
 
 }
@@ -250,7 +241,7 @@ h1 {
 
 h2.sub-title {
 	color: #ffffff;
-	font-size: 1rem;
+	font-size: 1em;
 	font-weight: lighter;
 	margin: 0 0 10px;
 }
@@ -409,48 +400,16 @@ input {
 	justify-content: space-around;	
 }
 
-.error-number1,
-.error-number2 {
+.error-number {
 	display: block;
 }
 
-#most-recent-guess-1,
-#most-recent-guess-2 {
+.most-recent-guess-1,
+.most-recent-guess-2 {
 	color: #DD1972;
-	font-size: 67px;
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 20px;
 }
-
-.latest-score-left,
-.latest-score-right {
-	display: block;
-}
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -685,33 +644,6 @@ input {
 
 
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 320px) {
 
@@ -885,10 +817,10 @@ input {
 
 }
 
-#update-range,
-#button-submit-guess,
+/*#update-range,
+/*#button-submit-guess,
 #button-reset-game,
-#button-clear-game {
+#button-clear-game */{
 	background-color: #6e6e6e;
 	color: #ffffff;
 	font-weight: 700;
@@ -898,9 +830,10 @@ input {
 	border-radius: 32px;
 	margin-top: 20px;
 	margin-left: 0;
-}
+}*/
 
-.buttons {
+.buttons,
+#update-range {
 	display: flex;
 	justify-content: center;
 	align-content: space-around;
@@ -939,23 +872,5 @@ input {
 	display: flex;
 	justify-content: space-around;	
 }
-
-.error-number {
-	display: block;
-}
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
 
 
