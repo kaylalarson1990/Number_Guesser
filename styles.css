@@ -173,6 +173,19 @@ input {
 	justify-content: space-around;	
 }
 
-.error-number {
+.error-number1,
+.error-number2 {
+	display: block;
+}
+
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	color: #DD1972;
+	font-size: 67px;
+	font-weight: 700;
+}
+
+.latest-score-left,
+.latest-score-right {
 	display: block;
 }
