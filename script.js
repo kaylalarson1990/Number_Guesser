@@ -95,8 +95,10 @@ updateButton.addEventListener('click', function getRanges() {
 })
 
 function adjustRangesUponWin() {
-	updateMinRange.innerHTML -= 10;
-	updateMaxRange.innerHTML += 10;
+	var changeMinRange = updateMinRange.innerHTML;
+	var changeMaxRange = updateMaxRange.innerHTML;
+	updateMinRange.innerHTML = parseInt(changeMinRange) - 10;
+	updateMaxRange.innerHTML = parseInt(changeMaxRange) + 10;
 }
 // . create one button that submits the players guesses.
 //			i) link the button "click" to submit to correct places.
