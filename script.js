@@ -23,6 +23,7 @@ var errorNum1 = document.querySelector('.min-error');
 var errorNum2 = document.querySelector('.max-error');
 var guessError1 = document.querySelector('.guess-error-number1');
 var guessError2 = document.querySelector('.guess-error-number2');
+var totalGuesses = document.querySelector('#total-guesses');
 
 
 //creating random number
@@ -113,6 +114,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 	var c2Guess = guess2.value;
 	
 	enableButtons();
+
 
 
 	if (parseInt(c1Guess) === randomNumber) {
@@ -229,8 +231,8 @@ clearGameButton.addEventListener('click', function clearGame(event) {
 //		c) create an if statement that says:
 //			if button is "clicked", clear all elements, but do not
 //			change the random number.
-    minRange.value = "";
-    maxRange.value = "";
+    // minRange.value = "";
+    // maxRange.value = "";
     challenger1Name.value = "";
     challenger2Name.value = "";
     challenger1Results.value = "";
@@ -257,7 +259,7 @@ resetGameButton.addEventListener('click', function resetGame() {
 //		b) create an if statement that says:
 //			if button is "clicked", clear all fields and 
 //			random number.
-	minRange.value = "";
+	  minRange.value = "";
     maxRange.value = "";
     challenger1Name.value = "";
     challenger2Name.value = "";
@@ -293,8 +295,7 @@ function enableButtons() {
 };
 
 
-
-
+// Combined guess count of both players is displayed
 
 
 
