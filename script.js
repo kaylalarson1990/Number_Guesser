@@ -276,7 +276,10 @@ resetGameButton.addEventListener('click', function resetGame() {
     randomNumFunc();
 });
 
-
+function buttonsChangeColors() {
+    clearGameButton.classList.remove('disabled');
+    resetGameButton.classList.remove('disabled');
+}
 
 function disableButtons() {
     clearGameButton.disabled = true;
@@ -286,8 +289,8 @@ function disableButtons() {
 function enableButtons() {
     clearGameButton.disabled = false;
     resetGameButton.disabled = false;
+    buttonsChangeColors();
 };
-
 
 
 
