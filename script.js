@@ -140,8 +140,10 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			adjustRangesUponWin()
 	} else if (parseInt(c1Guess) > randomNumber) {
 		challenger1Results.innerHTML = "That's too high!"
+    showGuessesTotal();
 	} else {
 		challenger1Results.innerHTML = "That's too low!"
+    showGuessesTotal();
 	}
 //			i) will need to create an innerHTML to link to
 //				HTML that needs to be changed.
@@ -177,8 +179,10 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			adjustRangesUponWin()
 	} else if (parseInt(c2Guess) > randomNumber) {
 		challenger2Results.innerHTML = "That's too high!"
+    showGuessesTotal();
 	} else {
 		challenger2Results.innerHTML = "That's too low!"
+    showGuessesTotal();
 	}
 
 //player guesses should only fall between min and max range
@@ -245,11 +249,9 @@ clearGameButton.addEventListener('click', function clearGame(event) {
     updateChallenger2Name.innerText = "Name";
     updateChallenger1Guess.innerText = "0";
     updateChallenger2Guess.innerText = "0";
-    // THIS DOESN'T WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // clearGameButton.disabled = true;
-    // resetGameButton.disabled = true;
-    disableButtons();
+    totalGuesses.innerHTML = "0";
     event.preventDefault();
+    var x = 0;
 });
 
 
@@ -277,7 +279,9 @@ resetGameButton.addEventListener('click', function resetGame() {
     updateMaxRange.innerText = "--"
     event.preventDefault();
     winningCard.innerHTML = "";
+    totalGuesses.innerHTML ="0";
     randomNumFunc();
+    var x = 0;
 });
 
 function buttonsChangeColors() {
@@ -298,6 +302,29 @@ function enableButtons() {
 
 
 // Combined guess count of both players is displayed
+var x = 0;
+var array = Array();
+
+function add_element_to_array() {
+  
+  array[x] = guess1.value;
+  array[x] = guess2.value;
+  x++;
+}
+
+function display_array() {
+  var guessOrder = array.length;
+  for (var y=0; y<array.length; y++) { 
+  };
+  totalGuesses.innerHTML = guessOrder;
+  console.log('The array length is ' +guessOrder);
+}
+
+function showGuessesTotal() {
+  add_element_to_array();
+  display_array();
+}
+
 
 
 
