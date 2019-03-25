@@ -251,7 +251,7 @@ clearGameButton.addEventListener('click', function clearGame(event) {
     updateChallenger2Guess.innerText = "0";
     totalGuesses.innerHTML = "0";
     event.preventDefault();
-    var x = 0;
+    x = 0;
 });
 
 
@@ -281,7 +281,7 @@ resetGameButton.addEventListener('click', function resetGame() {
     winningCard.innerHTML = "";
     totalGuesses.innerHTML ="0";
     randomNumFunc();
-    var x = 0;
+    x = 0;
 });
 
 function buttonsChangeColors() {
