@@ -115,7 +115,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
   if (parseInt(c1Guess) === randomNumber) {
     challenger1Results.innerHTML = "BOOM!";
-    winningCard.innerHTML = `<h3>CHALLENGER 1 
+    winningCard.innerHTML += `<h3>CHALLENGER 1 
       <span id='challenger-1-name'>${challenger1Name.value}</span> 
       <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
       ${challenger2Name.value}</span></h3>
@@ -154,7 +154,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 	if (parseInt(c2Guess) === randomNumber) {
 		challenger2Results.innerHTML = "BOOM!";
-		winningCard.innerHTML = `<div class="section-1-winning-card">
+		winningCard.innerHTML += `<div class="section-1-winning-card">
 			<h3>CHALLENGER 1 
 			<span id='challenger-1-name'>${challenger1Name.value}</span> 
 			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
@@ -234,11 +234,11 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 })	
 
 
-for(var i = 0; i < closeButton.length; i++) {
-  closeButton[i].addEventListener('click', function closeWinButton() {
-    this.parentElement.style.display = 'none';
-  });
-}
+// for(var i = 0; i < closeButton.length; i++) {
+//   closeButton[i].addEventListener('click', function closeWinButton() {
+//     this.parentElement.style.display = 'none';
+//   });
+// }
 
 
 
