@@ -129,9 +129,12 @@ input {
 .challenger-1-info,
 .challenger-2-info {
 	display: flex;
-	flex: auto;
-	flex-flow: row wrap;
+	flex-direction: row;
+}
 
+.form-range {
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 #update-range{
@@ -153,24 +156,25 @@ input {
 }
 
 #update-range:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-submit-guess:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-reset-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-clear-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 .disabled {
 	opacity: 0.6;
 	cursor: not-allowed;
+	background-color: #d0d2d3;
 }
 
 .buttons {
@@ -182,16 +186,16 @@ input {
 
 .score-card {
 	display: flex;
-	justify-content: space-around;
-	width: 700px;
+/*	justify-content: space-around;*/
+	width: 90%;
 }
 
 .range-card,
 .challenger-guess,
 .score-card {
-	width: 700px;
-	height: auto;
-	background-color: #fff;
+	width: 90%;
+	height: auto;	
+	background-color: #ffffff;
 	border: 2px solid lightgrey;
 	margin: 10px;
 }
@@ -349,7 +353,7 @@ main {
 
 form {
 	display: flex;
-	flex-flow: column;
+	flex-direction: row;
 	align-items: flex-start;
 }
 
@@ -401,19 +405,19 @@ input {
 }
 
 #update-range:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-submit-guess:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-reset-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-clear-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 .buttons {
@@ -628,19 +632,19 @@ input {
 }
 
 #update-range:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-submit-guess:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-reset-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 #button-clear-game:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #dd1972;
 }
 
 .buttons {
