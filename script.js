@@ -124,14 +124,15 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       <h2 class='winner'>WINNER</h2>
       <div class='bottom-winning-card'>
       <div class='guess-amount'>
-      <h3><span>47</span> GUESSES</h3>
+      <h3><span id="total-guesses">--</span> GUESSES</h3>
       </div>
       <div class='time'>
       <h3><span>1.35</span> MINUTES</h3>
       </div>
       <div class='closing-button'>x</div>
       </div>`;
-      adjustRangesUponWin()  
+      adjustRangesUponWin()
+      enableButtons()  
   } else if (parseInt(c1Guess) > randomNumber) {
     challenger1Results.innerHTML = "That's too high!"
     // showGuessesTotal();
@@ -165,7 +166,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			<h2 class='winner'>WINNER</h2>
 			<div class='bottom-winning-card'>
 			<div class='guess-amount'>
-			<h3><span>47</span> GUESSES</h3>
+			<h3><span id="total-guesses">--</span> GUESSES</h3>
 			</div>
 			<div class='time'>
 			<h3><span>1.35</span> MINUTES</h3>
@@ -173,6 +174,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			<div class='closing-button'>x</div>
 			</div>`;
 			adjustRangesUponWin()
+      enableButtons();
 	} else if (parseInt(c2Guess) > randomNumber) {
 		challenger2Results.innerHTML = "That's too high!"
     // showGuessesTotal();
@@ -229,16 +231,16 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       nameError2.innerHTML = '';
     }
 
-  console.log('should increment ' + x)
+  console.log('Number of total guesses ' + x)
   totalGuesses.innerHTML = x;
 })	
 
 
-for(var i = 0; i < closeButton.length; i++) {
-  closeButton[i].addEventListener('click', function closeWinButton() {
-    this.parentElement.style.display = 'none';
-  });
-}
+// for(var i = 0; i < closeButton.length; i++) {
+//   closeButton[i].addEventListener('click', function closeWinButton() {
+//     this.parentElement.style.display = 'none';
+//   });
+// }
 
 
 
@@ -293,7 +295,6 @@ resetGameButton.addEventListener('click', function resetGame() {
     updateMaxRange.innerText = "--"
     event.preventDefault();
     winningCard.innerHTML = "";
-    totalGuesses.innerHTML ="0";
     randomNumFunc();
     x = 0;
 });
