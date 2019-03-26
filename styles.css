@@ -1,6 +1,6 @@
-
-/** {
-	border: 1px solid red;
+/*
+* {
+	border: 1px solid pink;
 }*/
 
 
@@ -81,6 +81,7 @@ h2.sub-title {
 
 h3 {
 	margin: 20px
+	font-size: 12px;
 }
 
 .light-weight-name {
@@ -123,7 +124,7 @@ main {
 input {
 	margin-top: 5px;
 	height: 20px;
-	width: 80%;
+	width: 95%;
 }
 
 #show-min-range,
@@ -136,20 +137,29 @@ input {
 .challenger-1-info,
 .challenger-2-info {
 	display: flex;
-	flex-direction: row;
+	margin: 0px;
 }
 
 .form-range {
 	flex-direction: row;
-	justify-content: space-around;
+	margin: 0px;
 }
 
-.box-form {
+.box-form-name,
+.box-form-guess{
 	display: flex;
 	flex-direction: column;
-	flex: 1;
-	margin-left: -20px;
 }
+
+.box-form-name {
+	flex: 2;
+}
+
+.box-form-guess {
+	flex:1;
+}
+
+
 
 #update-range{
 	margin-left: 20px;
@@ -167,7 +177,6 @@ input {
 	padding: 10px 40px;
 	border: none;
 	border-radius: 32px;
-	width: 31%;
 	height: 10%;
 }
 
@@ -198,6 +207,7 @@ input {
 	justify-content: space-around;
 	align-content: center;
 	margin: 10px;
+	padding-top: 20px;
 }
 
 .score-card {
@@ -217,7 +227,15 @@ input {
 	background-color: #ffffff;
 	border: 2px solid lightgrey;
 	margin: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
+
+.range-card {
+	padding-bottom: 20px;
+}
+
 
 
 .winning-card {
@@ -427,6 +445,10 @@ input {
 
 }*/
 
+.form-range {
+	justify-content: space-between;
+}
+
 #update-range,
 #button-submit-guess,
 #button-reset-game,
@@ -483,13 +505,10 @@ input {
 	text-align: center;	
 }
 
-.latest-score-left
+.latest-score-left,
 .latest-score-right {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	width: 100%;
-	margin-top: 100px;
+	justify-content: space-around;
 }
 
 .latest-score-left {
