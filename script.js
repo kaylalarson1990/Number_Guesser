@@ -21,12 +21,13 @@ var challenger2Results = document.querySelector('#too-high-too-low-2');
 var winningCard = document.querySelector('.winning-card');
 var errorNum1 = document.querySelector('.min-error');
 var errorNum2 = document.querySelector('.max-error');
+var nameError1 = document.querySelector('.name-error1');
+var nameError2 = document.querySelector('.name-error2');
 var guessError1 = document.querySelector('.guess-error-number1');
 var guessError2 = document.querySelector('.guess-error-number2');
 var totalGuesses = document.querySelector('#total-guesses');
+var closeButton = document.querySelector('.closing-button');
 var x = 0;
-
-
 //creating random number
 var randomNumber = 0;
 
@@ -40,10 +41,7 @@ function randomNumFunc (min, max) {
 // . create one button that updates the custom range of 
 //min and mix numbers.
 updateButton.addEventListener('click', function getRanges() {
-	// console.log(minRange.value)
 	var changeMinRange = minRange.value;
-	
-	// console.log(maxRange.value)
 	var changeMaxRange = maxRange.value;
 	
 	randomNumber = randomNumFunc(changeMinRange, changeMaxRange);
@@ -104,17 +102,11 @@ function adjustRangesUponWin() {
 // . create one button that submits the players guesses.
 //      i) link the button "click" to submit to correct places.
 submitGuessButton.addEventListener('click', function challengerInfo() {
-// console.log(x)
-  // console.log(challenger1Name.value)
   var c1Name = challenger1Name.value;
   updateChallenger1Name.innerHTML = c1Name;
-  // console.log(challenger2Name.value)
   var c2Name = challenger2Name.value;
   updateChallenger2Name.innerHTML = c2Name;
-  // console.log(guess1.value)
   var c1Guess = guess1.value;
-  
-  // console.log(guess2.value)
   var c2Guess = guess2.value;
   
   enableButtons();
@@ -137,10 +129,9 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       <div class='time'>
       <h3><span>1.35</span> MINUTES</h3>
       </div>
-      <div class='closing-button'>X</div>
+      <div class='closing-button'>x</div>
       </div>`;
-      adjustRangesUponWin()
-     
+      adjustRangesUponWin()  
   } else if (parseInt(c1Guess) > randomNumber) {
     challenger1Results.innerHTML = "That's too high!"
     // showGuessesTotal();
@@ -179,7 +170,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 			<div class='time'>
 			<h3><span>1.35</span> MINUTES</h3>
 			</div>
-			<div class='closing-button'></div>
+			<div class='closing-button'>x</div>
 			</div>`;
 			adjustRangesUponWin()
 	} else if (parseInt(c2Guess) > randomNumber) {
@@ -195,6 +186,11 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 //player guesses should only fall between min and max range
 
 //if player 1 guess is greater than the max or less than the min range, return an error
+  // //display an error if either guess is not a number (NaN)
+  // if(isNaN(c1Guess)) {
+  //  guess1NaN.innerHTML = 'Please enter a valid number.';
+  // }
+
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
         guessError1.innerHTML = 'Pick a number within the range';
     } else if (c1Guess === '') {
@@ -206,6 +202,9 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
         updateChallenger1Guess.innerHTML = c1Guess;
     }
 //if player 2 guess is greater than the max or less than the min range, return an error
+  // if(!isNaN(parseInt(c2Guess))) {
+  //  guess2NaN.innerHTML = 'Please enter a valid number.';
+  // }
     if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
         guessError2.innerHTML = 'Pick a number within the range';
     } else if (c2Guess === '') {
@@ -216,22 +215,30 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
         guessError2.innerHTML = '';
         updateChallenger2Guess.innerHTML = c2Guess;
     }
-	// //display an error if either guess is not a number (NaN)
-	// if(isNaN(c1Guess)) {
-	// 	guess1NaN.innerHTML = 'Please enter a valid number.';
-	// }
-	
-	// if(!isNaN(parseInt(c2Guess))) {
-	// 	guess2NaN.innerHTML = 'Please enter a valid number.';
-	// }
+
+
+    if(c1Name === '') {
+      nameError1.innerHTML = 'Please enter name.'
+    } else {
+      nameError1.innerHTML = '';
+    }
+
+    if(c2Name === '') {
+      nameError2.innerHTML = 'Please enter name.'
+    } else {
+      nameError2.innerHTML = '';
+    }
+
   console.log('should increment ' + x)
   totalGuesses.innerHTML = x;
 })	
 
 
-//Pseudocode Phase One:
-// ZERO STATE
-
+for(var i = 0; i < closeButton.length; i++) {
+  closeButton[i].addEventListener('click', function closeWinButton() {
+    this.parentElement.style.display = 'none';
+  });
+}
 
 
 

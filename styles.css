@@ -213,9 +213,28 @@ input {
 	justify-content: space-around;	
 }
 
+.closing-button {
+	cursor: pointer;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 2px solid #5f5f5f;
+	background-color: grey;
+	color: lightgrey;
+}
+
+.closing-button:hover {
+	background: #bbb;
+}
+
 
 .min-error,
-.max-error {
+.max-error,
+.guess-error-number1,
+.guess-error-number2,
+.name-error1,
+.name-error2 {
 	flex-wrap: wrap;
 	font-size: 15px;
 	color: #DD1972;
