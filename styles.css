@@ -1,4 +1,9 @@
 
+/** {
+	border: 1px solid red;
+}*/
+
+
 body {
 	font-family: "Open Sans", sans-serif;
 }
@@ -116,7 +121,9 @@ main {
 }
 
 input {
-	margin-top: 20px;
+	margin-top: 5px;
+	height: 20px;
+	width: 80%;
 }
 
 #show-min-range,
@@ -137,9 +144,16 @@ input {
 	justify-content: space-around;
 }
 
+.box-form {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin-left: -20px;
+}
+
 #update-range{
 	margin-left: 20px;
-
+	align-self: flex-end;
 }
 
 #update-range,
@@ -149,10 +163,12 @@ input {
 	background-color: #6e6e6e;
 	color: #ffffff;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 12px;
 	padding: 10px 40px;
 	border: none;
 	border-radius: 32px;
+	width: 31%;
+	height: 10%;
 }
 
 #update-range:hover{
@@ -186,8 +202,11 @@ input {
 
 .score-card {
 	display: flex;
-/*	justify-content: space-around;*/
+	align-items: flex-end;
 	width: 90%;
+	justify-content: center;
+
+
 }
 
 .range-card,
