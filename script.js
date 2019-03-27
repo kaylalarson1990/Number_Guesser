@@ -115,9 +115,11 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       <span id='challenger-1-name'>${challenger1Name.value}</span> 
       <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
       ${challenger2Name.value}</span></h3>
+      <span class="grey-line"></span>
       <h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
       <span id='challenger-2-name'>${challenger1Name.value}</span></h2>
       <h2 class='winner'>WINNER</h2>
+      <span class="grey-line"></span>
       <div class='bottom-winning-card'>
       <div class='guess-amount'>
       <h3><span id="total-guesses">--</span> GUESSES</h3>
@@ -151,24 +153,25 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 	if (parseInt(c2Guess) === randomNumber) {
 		challenger2Results.innerHTML = "BOOM!";
-		winningCard.innerHTML += `<div class="section-1-winning-card">
-			<h3>CHALLENGER 1 
-			<span id='challenger-1-name'>${challenger1Name.value}</span> 
-			<span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
-			${challenger2Name.value}</span></div></h3>
-			<div class="section-2-winning-card">
-			<h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
-			<span id='challenger-2-name'>${challenger2Name.value}</span></div></h2>
-			<h2 class='winner'>WINNER</h2>
-			<div class='bottom-winning-card'>
-			<div class='guess-amount'>
-			<h3><span id="total-guesses">--</span> GUESSES</h3>
-			</div>
-			<div class='time'>
-			<h3><span>1.35</span> MINUTES</h3>
-			</div>
-			<div class='closing-button'>x</div>
-			</div>`;
+		winningCard.innerHTML += `<h3>CHALLENGER 1 
+      <span id='challenger-1-name'>${challenger1Name.value}</span> 
+      <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
+      ${challenger2Name.value}</span></span></h3>
+      <span class="grey-line"></span>
+      <h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
+      <span id='challenger-2-name'>${challenger2Name.value}</span></h2>
+      <h2 class='winner'>WINNER</h2>
+      <span class="grey-line"></span>
+      <div class='bottom-winning-card'>
+      <div class='guess-amount'>
+      <h3><span id="total-guesses">--</span> GUESSES</h3>
+      </div>
+      <div class='time'>
+      <h3><span>1.35</span> MINUTES</h3>
+      </div>
+      <div class='closing-button'>x</div>
+      </div>`;
+
 			adjustRangesUponWin()
       enableButtons();
 	} else if (parseInt(c2Guess) > randomNumber) {
