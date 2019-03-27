@@ -239,12 +239,24 @@ input {
 	background-color: #d0d2d3;
 }
 
+#update-range,
+#button-submit-guess,
+#button-reset-game,
+#button-clear-game {
+	background-color: #6e6e6e;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 10px 40px;
+	border: none;
+	border-radius: 32px;
+}
+
 .buttons {
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
 	margin: 10px;
-	padding-top: 20px;
 }
 
 .score-card {
@@ -321,7 +333,6 @@ input {
 }
 
 
-
 .min-error,
 .max-error,
 .guess-error-number1,
@@ -346,38 +357,6 @@ input {
 
 @media screen and (max-width: 1224px) {
 
-body {
-	font-family: "Open Sans", sans-serif;
-}
-
-.frame {
-	height: auto;
-	width: 100%;
-	background-color: white;
-	border: 0px;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-.circle {
-	display: none;
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
-	border: 2px solid #5f5f5f;
-	margin-left: 16px;
-	margin-top: 20px;
-	margin-bottom: 22px;
-	background-color: red;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-.green {
-	background-color: green;
-}
 
 header {
 	display: flex;
@@ -420,12 +399,7 @@ main {
 }
 
 .left-column {
-	background-color: #f7f7f7;
-	color: #6e6e6e;
-	height: auto;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 /*	align-content: space-around;*/
 }
@@ -447,10 +421,7 @@ main {
 .score-card {
 	display: flex;
 	flex-flow: column;
-	width: 70%;
-	height: auto;
-	background-color: #fff;
-	border: 2px solid lightgrey;
+	width: 60%;
 	margin-top: 20px;
 	text-align: center;
 }
@@ -487,7 +458,7 @@ input {
 	flex-flow: column;
 	justify-content: center;
 	flex-direction: column;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 
@@ -496,20 +467,6 @@ input {
 	justify-content: space-between;
 }
 
-#update-range,
-#button-submit-guess,
-#button-reset-game,
-#button-clear-game {
-	background-color: #6e6e6e;
-	color: #ffffff;
-	font-weight: 700;
-	font-size: 20px;
-	padding: 10px 40px;
-	border: none;
-	border-radius: 32px;
-	margin-top: 20px;
-	margin-left: 0;
-}
 
 #update-range:hover{
   background-color: #dd1972;
@@ -548,8 +505,11 @@ input {
 }
 
 .score-card {
-	width: 97%;
-	text-align: center;	
+	display: flex;
+    flex-flow: column;
+    width: 60%;
+    margin-top: 20px;
+    text-align: center;	
 }
 
 .latest-score-left,
@@ -564,11 +524,11 @@ input {
 }*/
 
 .winning-card {
-	width: 70%;
-	height: auto;
-	/*border: 1px solid grey;*/
-	margin-top: 10px;
-    margin-bottom: 10px;
+	display: flex;
+    flex-flow: column;
+    width: 64%;
+    margin-top: 20px;
+    text-align: center;
 }
 
 h2{

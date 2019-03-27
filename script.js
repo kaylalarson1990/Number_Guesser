@@ -116,7 +116,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       <span>vs</span> CHALLENGER 2 <span id='challenger-2-name'>
       ${challenger2Name.value}</span></h3>
       <span class="grey-line"></span>
-      <h2>CHALLENGER <span id='the-winner-id-number'>2</span> 
+      <h2>CHALLENGER <span id='the-winner-id-number'>1</span> 
       <span id='challenger-2-name'>${challenger1Name.value}</span></h2>
       <h2 class='winner'>WINNER</h2>
       <span class="grey-line"></span>
