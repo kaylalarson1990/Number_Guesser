@@ -39,6 +39,21 @@ function randomNumFunc (min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function buttonsChangeColors() {
+    clearGameButton.classList.remove('disabled');
+    resetGameButton.classList.remove('disabled');
+}
+
+function disableButtons() {
+    clearGameButton.disabled = true;
+    resetGameButton.disabled = true;
+};
+
+function enableButtons() {
+    clearGameButton.disabled = false;
+    resetGameButton.disabled = false;
+    buttonsChangeColors();
+};
 
 // . create two inputs that takes one min range number 
 //and one max range number.
@@ -312,21 +327,7 @@ resetGameButton.addEventListener('click', function resetGame() {
     x = 0;
 });
 
-function buttonsChangeColors() {
-    clearGameButton.classList.remove('disabled');
-    resetGameButton.classList.remove('disabled');
-}
 
-function disableButtons() {
-    clearGameButton.disabled = true;
-    resetGameButton.disabled = true;
-};
-
-function enableButtons() {
-    clearGameButton.disabled = false;
-    resetGameButton.disabled = false;
-    buttonsChangeColors();
-};
 
 
 // closing button on the winning card
