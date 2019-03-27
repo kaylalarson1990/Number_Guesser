@@ -27,6 +27,8 @@ var guessError1 = document.querySelector('.guess-error-number1');
 var guessError2 = document.querySelector('.guess-error-number2');
 var totalGuesses = document.querySelector('#total-guesses');
 var closeButton = document.querySelector('.closing-button');
+var rightColumn = document.querySelector('.right-column');
+var bottomWinningCard = document.querySelector('.bottom-winning-card')
 var x = 0;
 //creating random number
 var randomNumber = 0;
@@ -327,6 +329,16 @@ function enableButtons() {
 };
 
 
+// closing button on the winning card
+closeButton.addEventListener('click', removeCard);
+bottomWinningCard.addEventListener('click', removeCard);
+winningCard.addEventListener('click', removeCard);
+rightColumn.addEventListener('click', removeCard);
+
+function removeCard(e) {
+    event.target.parentElement.parentElement.remove();
+    e.preventDefault();
+};
 
 
 
