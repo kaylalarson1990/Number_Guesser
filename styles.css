@@ -90,6 +90,16 @@ p {
 	margin-bottom: 5px;
 }
 
+h3.latest-score {
+	position: absolute;
+} 
+
+h3.c1-name-mediaq,
+h3.c2-name-media1 {
+	position: relative;
+	margin-top: 100px;
+}
+
 .white-line {
 	width: 65%;
 	margin: auto;
@@ -376,6 +386,10 @@ h1 {
 
 }
 
+label {
+	margin-top: 20px;
+}
+
 
 h2.sub-title {
 	color: #ffffff;
@@ -424,6 +438,23 @@ main {
 	width: 60%;
 	margin-top: 20px;
 	text-align: center;
+}
+
+.score-card {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+
+}
+
+.c1-name-mediaq {
+	margin-top: 50px;
+	display: flex;
+}
+
+.c2-name-mediaq {
+	margin-left: 90px;
+	display: flex;
 }
 
 .light-weight-range {
@@ -504,13 +535,6 @@ input {
 	justify-content: space-between;
 }
 
-.score-card {
-	display: flex;
-    flex-flow: column;
-    width: 60%;
-    margin-top: 20px;
-    text-align: center;	
-}
 
 .latest-score-left,
 .latest-score-right {
@@ -518,10 +542,7 @@ input {
 	justify-content: space-around;
 }
 
-/*.latest-score-left {
-	border-bottom: 1px solid lightgray;	
-	border-top: 1px solid lightgray;	
-}*/
+
 
 .winning-card {
 	display: flex;
@@ -568,7 +589,6 @@ body {
 	width: 100%;
 	background-color: white;
 	border: 0px;
-	padding: 10px;
 	box-sizing: border-box;
 }
 
@@ -661,8 +681,6 @@ input {
 
 }
 
-
-
 .form-range,
 .challenger-1-info,
 .challenger-2-info {
@@ -679,21 +697,7 @@ input {
     align-self: center;
     
 }
-/*
-#update-range,
-#button-submit-guess,
-#button-reset-game,
-#button-clear-game {
-	background-color: #6e6e6e;
-	color: #ffffff;
-	font-weight: 700;
-	font-size: 18px;
-	padding: 10px 40px;
-	border: none;
-	border-radius: 32px;
-	margin-top: 20px;
-	margin-left: 0;
-}*/
+
 
 #update-range:hover{
   background-color: #dd1972;
@@ -749,6 +753,7 @@ input {
 .winning-card {
 	width: 95%;
 	height: auto;
+	margin-bottom: 20px;
 }
 
 .error-number {
