@@ -251,6 +251,21 @@ input {
 	background: #bbb;
 }
 
+#minimum-range,
+#maximum-range {
+	width: 90%;
+}
+
+.min-error-range,
+.max-error-range,
+.name1-error,
+.name2-error,
+.guess1-error,
+.guess2-error {
+	border: 1px solid #DD1972;
+}
+
+
 
 .min-error,
 .max-error,
@@ -261,6 +276,7 @@ input {
 	flex-wrap: wrap;
 	font-size: 15px;
 	color: #DD1972;
+
 }
 
 #most-recent-guess-1,
@@ -419,13 +435,7 @@ input {
 	margin-bottom: 50px;
 }
 
-/*#update-range{
-	margin-left: 20px;
-	width: 200px;
-	display: flex;
-	flex-direction: column;
 
-}*/
 
 #update-range,
 #button-submit-guess,
