@@ -264,11 +264,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 })	
 
 
-// for(var i = 0; i < closeButton.length; i++) {
-//   closeButton[i].addEventListener('click', function closeWinButton() {
-//     this.parentElement.style.display = 'none';
-//   });
-// }
+
 
 
 
@@ -327,19 +323,19 @@ resetGameButton.addEventListener('click', function resetGame() {
     x = 0;
 });
 
+function createWinningCard() {
 
+  winningCard.insertAdjacentHTML('afterBegin', winnerCard);
+}
 
 
 // closing button on the winning card
-closeButton.addEventListener('click', removeCard);
-bottomWinningCard.addEventListener('click', removeCard);
-winningCard.addEventListener('click', removeCard);
-rightColumn.addEventListener('click', removeCard);
+winningCard.addEventListener('click', function(event) {
+  if (event.target.className === 'closing-button') {
+    event.target.parentNode.parentNode.remove();
+  }
+});
 
-function removeCard(e) {
-    event.target.parentElement.parentElement.remove();
-    e.preventDefault();
-};
 
 
 
