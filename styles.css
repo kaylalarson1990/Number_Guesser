@@ -297,15 +297,20 @@ input {
 
 
 
-.winning-card {
+.winning-card, 
+.testing {
 	width: 90%;
 	height: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
 	background-color: #fff;
-	/*border: 2px solid grey;*/
+/*	border: 2px solid grey;*/
+}
+
+.border {
+	border: 2px solid grey;
 }
 
 .bottom-winning-card {
