@@ -531,12 +531,19 @@ input {
 }
 
 
+.score-card {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: row;
+		}
+
 .latest-score-left,
 .latest-score-right {
-	display: flex;
-	justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
-
 
 
 .winning-card {
@@ -641,8 +648,7 @@ main {
 
 
 .range-card,
-.challenger-guess,
-.score-card {
+.challenger-guess {
 	display: flex;
 	flex-flow: column;
 	width: 85%;
@@ -650,6 +656,16 @@ main {
 	background-color: #fff;
 	border: 2px solid lightgrey;
 	text-align: center;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: auto;
+    background-color: #fff;
+    border: 2px solid lightgrey;
+    text-align: center;
 }
 
 .light-weight-range {
@@ -727,13 +743,13 @@ input {
 }
 
 
-.latest-score-left
+
+.latest-score-left,
 .latest-score-right {
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
-	width: 100%;
+    flex-direction: column;
 }
+
+
 
 .latest-score-left {
 	border-bottom: 1px solid lightgray;	
@@ -1233,8 +1249,7 @@ form {
 		}
 
 		.range-card,
-		.challenger-guess,
-		.score-card {
+		.challenger-guess {
 			display: flex;
 			flex-flow: column;
 			width: 95%;
@@ -1246,7 +1261,16 @@ form {
 			display: flex;
 			align-items: start;
 			justify-content: center;
+			flex-direction: row;
 		}
+
+		.latest-score-left,
+		.latest-score-right {
+    		display: flex;
+    		justify-content: flex-start;
+    		flex-direction: column;
+		}
+
 
 		.light-weight-range {
 			font-weight: 300;
@@ -1318,12 +1342,8 @@ form {
 			justify-content: space-between;
 		}
 
-		.latest-score-left,
-		.latest-score-right {
-			display: flex;
-			justify-content: flex-start;
-		}
 
+	
 		.winning-card {
 			display: flex;
 			flex-flow: column;
@@ -1416,16 +1436,19 @@ form {
 			}
 
 			.range-card,
-			.challenger-guess,
+			.challenger-guess {
+				display: flex;
+				flex-direction: column;
+				width: 95%;
+
+			}
+
 			.score-card {
 				display: flex;
-				flex-flow: column;
-				width: 95%;
-				height: auto;
-				background-color: #fff;
-				border: 2px solid lightgrey;
-				text-align: center;
+				flex-direction: row
 			}
+
+
 
 			.light-weight-range {
 				font-weight: 300;
@@ -1495,6 +1518,8 @@ form {
 				width: 80%;
 				margin: 10px;
 			}
+
+
 
 			.latest-score-left
 			.latest-score-right {
