@@ -64,10 +64,7 @@ winningCard.addEventListener('click', function(event) {
   }
 });
 
-// . create two inputs that takes one min range number 
-//and one max range number.
-// . create one button that updates the custom range of 
-//min and mix numbers.
+
 updateButton.addEventListener('click', function getRanges() {
 	var changeMinRange = minRange.value;
 	var changeMaxRange = maxRange.value;
@@ -76,7 +73,6 @@ updateButton.addEventListener('click', function getRanges() {
 	console.log(randomNumber);
 
 	//display an error if max range is less than min range
-
 	if(parseInt(changeMaxRange) <= parseInt(changeMinRange)) {
         errorNum2.innerHTML = 'Please choose a number greater than the min range.';
         maxRange.classList.add('max-error-range');
@@ -121,8 +117,8 @@ function adjustRangesUponWin() {
 	updateMinRange.innerHTML = parseInt(changeMinRange) - 10;
   updateMaxRange.innerHTML = parseInt(changeMaxRange) + 10;
 }
-// . create one button that submits the players guesses.
-//      i) link the button "click" to submit to correct places.
+
+//submit button
 submitGuessButton.addEventListener('click', function challengerInfo() {
   var c1Name = challenger1Name.value;
   updateChallenger1Name.innerHTML = c1Name;
@@ -134,7 +130,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
   enableButtons();
 
 
-
+//guess 1
   if (parseInt(c1Guess) === randomNumber) {
     challenger1Results.innerHTML = "BOOM!";
     winningCard.innerHTML += `<h3>CHALLENGER 1 
@@ -160,24 +156,13 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       enableButtons()  
   } else if (parseInt(c1Guess) > randomNumber) {
     challenger1Results.innerHTML = "That's too high!"
-    // showGuessesTotal();
     x++
   } else {
     challenger1Results.innerHTML = "That's too low!"
-    // showGuessesTotal();
     x++
   }
-//      i) will need to create an innerHTML to link to
-//        HTML that needs to be changed.
-//    b) if the players guess is too low, 
-//      return a statement.
-//      i) will need to create an innerHTML to link to
-//        HTML that needs to be changed.
-//    c) if the players guess matches the number, 
-//      return a statement.
-//      i) will need to create an innerHTML to link to
-//        HTML that needs to be changed.
-
+     
+//guess 2
 	if (parseInt(c2Guess) === randomNumber) {
 		challenger2Results.innerHTML = "BOOM!";
 		winningCard.innerHTML += `<h3>CHALLENGER 1 
@@ -203,22 +188,14 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       enableButtons();
 	} else if (parseInt(c2Guess) > randomNumber) {
 		challenger2Results.innerHTML = "That's too high!"
-    // showGuessesTotal();
     x++
 	} else {
 		challenger2Results.innerHTML = "That's too low!"
-    // showGuessesTotal();
     x++
 	}
 
-//player guesses should only fall between min and max range
 
-//if player 1 guess is greater than the max or less than the min range, return an error
-  // //display an error if either guess is not a number (NaN)
-  // if(isNaN(c1Guess)) {
-  //  guess1NaN.innerHTML = 'Please enter a valid number.';
-  // }
-
+//player 1 error messages
 	if(parseInt(c1Guess) > maxRange.value || parseInt(c1Guess) < minRange.value) {
         guessError1.innerHTML = 'Pick a number within the range';
         guess1.classList.add('guess1-error');
@@ -233,10 +210,8 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
         updateChallenger1Guess.innerHTML = c1Guess;
         guess1.classList.remove('guess1-error');
     }
-//if player 2 guess is greater than the max or less than the min range, return an error
-  // if(!isNaN(parseInt(c2Guess))) {
-  //  guess2NaN.innerHTML = 'Please enter a valid number.';
-  // }
+
+//player 2 error messages
     if(parseInt(c2Guess) > maxRange.value || parseInt(c2Guess) < minRange.value) {
         guessError2.innerHTML = 'Pick a number within the range';
         guess2.classList.add('guess2-error');
@@ -276,21 +251,8 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
 
 
 
-
-
-
-
-// . create one button that clears the input values,
-//but does not change the random number.
+//clear button
 clearGameButton.addEventListener('click', function clearGame(event) {
-//		a) this button should be disabled if there is nothing
-//			to clear. 
-//		b) link the button "click" to submit to correct places.
-//		c) create an if statement that says:
-//			if button is "clicked", clear all elements, but do not
-//			change the random number.
-    // minRange.value = "";
-    // maxRange.value = "";
     challenger1Name.value = "";
     challenger2Name.value = "";
     challenger1Results.value = "";
@@ -305,14 +267,8 @@ clearGameButton.addEventListener('click', function clearGame(event) {
 });
 
 
-// . create one button that resets the whole game and
-//regenerates a new random number
+//reset game
 resetGameButton.addEventListener('click', function resetGame() {
-//		a) this button should be disabled if there is nothing
-//			to clear. 
-//		b) create an if statement that says:
-//			if button is "clicked", clear all fields and 
-//			random number.
 	  minRange.value = "";
     maxRange.value = "";
     challenger1Name.value = "";
