@@ -8,7 +8,11 @@ body {
 	font-family: "Open Sans", sans-serif;
 }
 
-
+img {
+	width: 25px;
+	height: 25px;
+	margin-top:5px;
+}
 
 /*.frame {
 	height: auto;
@@ -95,7 +99,9 @@ h3.latest-score {
 } 
 
 h3.c1-name-mediaq,
-h3.c2-name-media1 {
+h3.c2-name-mediaq,
+p.c1-name-mediaq,
+p.c2-name-mediaq {
 	position: relative;
 	margin-top: 100px;
 }
@@ -256,7 +262,7 @@ input {
 	background-color: #6e6e6e;
 	color: #ffffff;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 14px;
 	padding: 10px 40px;
 	border: none;
 	border-radius: 32px;
@@ -264,9 +270,9 @@ input {
 
 .buttons {
 	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	margin: 10px;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
 }
 
 .score-card {
@@ -440,7 +446,7 @@ main {
 .score-card {
 	display: flex;
 	flex-flow: column;
-	width: 60%;
+	width: 95%;
 	margin-top: 20px;
 	text-align: center;
 }
@@ -452,15 +458,7 @@ main {
 
 }
 
-.c1-name-mediaq {
-	margin-top: 50px;
-	display: flex;
-}
 
-.c2-name-mediaq {
-	margin-left: 90px;
-	display: flex;
-}
 
 .light-weight-range {
 	font-weight: 300;
@@ -544,7 +542,7 @@ input {
 .latest-score-left,
 .latest-score-right {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 
 
@@ -552,7 +550,7 @@ input {
 .winning-card {
 	display: flex;
     flex-flow: column;
-    width: 64%;
+    width: 90%;
     margin-top: 20px;
     text-align: center;
 }
@@ -582,7 +580,7 @@ h2{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
 
 
 body {
@@ -678,6 +676,13 @@ input {
 	margin-top: 20px;
 	width: 100%;
 	height:20px;
+}
+
+#most-recent-guess-1, 
+#most-recent-guess-2 {
+    color: #DD1972;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
 }
 
 #show-min-range,
