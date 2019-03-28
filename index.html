@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>
-			Number Guesser | Andreea Hanson & Kayla Larson| 1093 FE | Mod 1
-		</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:light 300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-<!-- 		<link rel="stylesheet" type="text/css" href="stylesmobile.css" media="screen and (max-width: 900px)"> -->
-	</head>
-	<body>
-		<div class="frame">
-			<div class="circle red"></div>
-			<div class="circle yellow"></div>
-			<div class="circle green"></div>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Number Guesser | Andreea Hanson & Kayla Larson| 1093 FE | Mod 1
+	</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:light 300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+<body>
+	<div class="frame">
+		<div class="circle red"></div>
+		<div class="circle yellow"></div>
+		<div class="circle green"></div>
 		<header>
 			<h1>NUMBER<span class="light-weight-name">GUESSER</span></h1>
 			<h2 class="sub-title">ULTIMATE CHALLENGER EDITION</h2>
 			<span class="white-line"></span>
-			</div>
-		</header>
-		<main>
-			<article class='left-column'>
-				<section class='range-card'>
-					<h3>Set Range</h3>
-					<figure class="form-range">
+		</div>
+	</header>
+	<main>
+		<article class='left-column'>
+			<section class='range-card'>
+				<h3>Set Range</h3>
+				<figure class="form-range">
 					<form class='box-form-name'>
 						<label for="min-range">Min Range</label>
 						<input class="minimum-range" type="text">
@@ -36,14 +35,12 @@
 						<div class='max-error'><!-- <img src='images/error-icon.svg'> --></div>
 					</form>
 					<button id='update-range'>UPDATE</button>
-					</figure>
-				</section>
-
-
-				<section class='challenger-guess'>
-					<h3><span class='light-weight-range'>The Current Range is </span><span id='show-min-range'>1</span><span class='light-weight-range'> to </span><span id='show-max-range'>100</span></h3>
-					<h3>Challenger 1</h3>
-					<figure class='challenger-1-info'>
+				</figure>
+			</section>
+			<section class='challenger-guess'>
+				<h3><span class='light-weight-range'>The Current Range is </span><span id='show-min-range'>1</span><span class='light-weight-range'> to </span><span id='show-max-range'>100</span></h3>
+				<h3>Challenger 1</h3>
+				<figure class='challenger-1-info'>
 					<form class='box-form-name'>
 						<label for="challenger-1">Name</label>
 						<input id='name-name-1' type="text">
@@ -54,9 +51,9 @@
 						<input id='guess-guess-1' type="text">
 						<span class='guess-error-number1'><!-- <img src='images/error-icon.svg'> --></span>
 					</form>
-					</figure>
-					<h3>Challenger 2</h3>
-					<figure class='challenger-2-info'>
+				</figure>
+				<h3>Challenger 2</h3>
+				<figure class='challenger-2-info'>
 					<form class='box-form-name'>
 						<label for="challenger-2">Name</label>
 						<input id='name-name-2' type="text">
@@ -67,45 +64,36 @@
 						<input id='guess-guess-2' type="text">
 						<span class='guess-error-number2'><!-- <img src='images/error-icon.svg'> --></span>
 					</form>
-					</figure>
-					<div class='buttons'>
+				</figure>
+				<div class='buttons'>
 					<button id='button-submit-guess'>SUBMIT GUESS</button>
 					<button id='button-reset-game' class='disabled'>RESET GAME</button>
 					<button id='button-clear-game' class='disabled'>CLEAR GAME</button>
-					</div>
-				</section>
-					
-					<div class='score-card'>
-					<!-- <section class='score-card'> -->
-						
+				</div>
+			</section>
+			<div class='score-card'>
 					<div class='latest-score-left'>
 						<h3 class='latest-score'>Latest  Score</h3>
 						<h3 class='c1-name-mediaq'>Challenger 1 <span id='challenger-1-name'>Name<span></h3>
 							<p class='c1-name-mediaq'>current guess</p>
 							<p class='c1-name-mediaq'><span id='most-recent-guess-1'>--</span></p>
 							<p class='c1-name-mediaq'><span id='too-high-too-low-1'>Start guessing!</span></p>
-
-					</div>
-					<span class="grey-line2"></span>
-					<div class='latest-score-right'>
-						<h3 class='c2-name-mediaq'>Challenger 2 <span id='challenger-2-name'>Name<span></h3>
-							<p class='c2-name-mediaq'>current guess</p>
-							<p class='c2-name-mediaq'><span id='most-recent-guess-2'>--</span></p>
-							<p class='c2-name-mediaq'><span id='too-high-too-low-2'>Start guessing!</span></p>
-
-					</div>
-				<!-- </section> -->
-					</div>
-			</article>
-
-			<article class='right-column'>
-				<section class='winning-card'>
-				</section>
-				
-			</article>
-
-		</main>
-		</div>
-	</body>
-	<script src="script.js"></script>
-</html>
+						</div>
+						<span class="grey-line2"></span>
+						<div class='latest-score-right'>
+							<h3 class='c2-name-mediaq'>Challenger 2 <span id='challenger-2-name'>Name<span></h3>
+								<p class='c2-name-mediaq'>current guess</p>
+								<p class='c2-name-mediaq'><span id='most-recent-guess-2'>--</span></p>
+								<p class='c2-name-mediaq'><span id='too-high-too-low-2'>Start guessing!</span></p>
+							</div>
+						</div>
+					</article>
+					<article class='right-column'>
+						<section class='winning-card'>
+						</section>
+					</article>
+				</main>
+			</div>
+		</body>
+		<script src="script.js"></script>
+		</html>
