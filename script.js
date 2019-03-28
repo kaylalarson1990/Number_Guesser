@@ -286,7 +286,7 @@ resetGameButton.addEventListener('click', function resetGame() {
     event.preventDefault();
     winningCard.innerHTML = "";
     randomNumFunc();
-    winningCard.classList.add('border');
+    winningCard.classList.remove('border');
     x = 0;
 });
 
