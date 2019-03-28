@@ -27,8 +27,6 @@ var guessError1 = document.querySelector('.guess-error-number1');
 var guessError2 = document.querySelector('.guess-error-number2');
 var totalGuesses = document.querySelector('#total-guesses');
 var closeButton = document.querySelector('.closing-button');
-var rightColumn = document.querySelector('.right-column');
-var bottomWinningCard = document.querySelector('.bottom-winning-card')
 var x = 0;
 //creating random number
 var randomNumber = 0;
