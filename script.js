@@ -157,7 +157,6 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       </div>
       <div class='closing-button'>x</div>
       </div>`;
-      winningCard.classList.add('border');
       adjustRangesUponWin()
       enableButtons()  
   } else if (parseInt(c1Guess) > randomNumber) {
@@ -200,7 +199,7 @@ submitGuessButton.addEventListener('click', function challengerInfo() {
       </div>
       <div class='closing-button'>x</div>
       </div>`;
-      winningCard.classList.add('border');
+
 			adjustRangesUponWin()
       enableButtons();
 	} else if (parseInt(c2Guess) > randomNumber) {
@@ -332,7 +331,6 @@ resetGameButton.addEventListener('click', function resetGame() {
     event.preventDefault();
     winningCard.innerHTML = "";
     randomNumFunc();
-    winningCard.classList.remove('border');
     x = 0;
 });
 
