@@ -2,7 +2,7 @@
 By: Andreea Hanson &amp; Kayla Larson
 
 ## About the game
-Number Guesser is a game in which 2 players try to guess a randomly generated number between 1 and 100, with the option of modifying the range however they like. After setting the range, each player needs to write their names and their guess in the assigned fields, and click the submit button. Their names and their latest guesses will be updated on the lower left side of the screen. Once a player guesses the number, a winner card is displayed on the right side of the screen, showing the winner's name, the total number of guesses it took to guess the number, and the total time of the game.
+Number Guesser is a game in which 2 players try to guess a randomly generated number between 1 and 100, with the option of modifying the range however they like. After setting the range, each player needs to write their name and their guess in the assigned fields, and click the submit button. Their names and their latest guesses will be updated on the lower left side of the screen. Once a player guesses the number, a winner card is displayed on the right side of the screen, showing the winner's name, the total number of guesses it took to guess the number, and the total time of the game.
 
 ## Functionality of the game
 The game is displayed in two columns:
