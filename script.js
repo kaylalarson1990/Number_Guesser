@@ -55,6 +55,17 @@ function enableButtons() {
     buttonsChangeColors();
 };
 
+function createWinningCard() {
+  winningCard.insertAdjacentHTML('afterBegin', winnerCard);
+}
+
+// closing button on the winning card
+winningCard.addEventListener('click', function(event) {
+  if (event.target.className === 'closing-button') {
+    event.target.parentNode.parentNode.remove();
+  }
+});
+
 // . create two inputs that takes one min range number 
 //and one max range number.
 // . create one button that updates the custom range of 
@@ -323,18 +334,7 @@ resetGameButton.addEventListener('click', function resetGame() {
     x = 0;
 });
 
-function createWinningCard() {
 
-  winningCard.insertAdjacentHTML('afterBegin', winnerCard);
-}
-
-
-// closing button on the winning card
-winningCard.addEventListener('click', function(event) {
-  if (event.target.className === 'closing-button') {
-    event.target.parentNode.parentNode.remove();
-  }
-});
 
 
 
