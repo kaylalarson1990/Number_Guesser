@@ -52,6 +52,8 @@ body {
 		font-size: 3em;
 		margin-top: 5px;
 		margin-bottom: 5px;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 
 
@@ -92,7 +94,7 @@ body {
 	}
 
 	.white-line {
-		width: 65%;
+		width: 58%;
 		margin: auto;
 		border-top: 2px solid white;
 		z-index: 1;
