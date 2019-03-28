@@ -17,9 +17,9 @@ The game is displayed in two columns:
 ### The Challengers' Info Card includes:
 * an input for each of the 2 players' names
 * an input for each of the 2 players' guesses
-* a Submit button
-* a Clear Game button
-* a Reset Game button
+* a Submit button (submits each player's guess)
+* a Clear Game button (clears Name and Guess fields)
+* a Reset Game button (clears all the fields, removes the winning card, and generates a new Random Number)
 
 ### The Latest Score Card includes:
 * each of the players' names and latest guesses
