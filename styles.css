@@ -30,6 +30,827 @@ body {
 
 .green {
 	background-color: green;
+
+}*/
+
+header {
+	display: flex;
+	background-color: #404041;
+	height: auto;
+	align-items: center;
+	flex-direction: column
+
+}
+
+h1 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 6rem;
+	font-weight: 800;
+	margin: 10px 0 0;
+
+}
+
+h2 {
+	font-size: 3em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+h2.winner {
+	font-weight: 300;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+h2.sub-title {
+	background-color: #404041;
+	margin: auto;
+	padding-bottom: 10px;
+	font-weight: 300;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	z-index: 5;
+	position: relative;
+}
+
+p {
+	text-align: center;
+
+}
+
+h3.latest-score {
+	position: absolute;
+} 
+
+h3.c1-name-mediaq,
+h3.c2-name-mediaq {
+	position: relative;
+	margin-top: 50px;
+}
+
+.white-line {
+	width: 65%;
+	margin: auto;
+	border-top: 2px solid white;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	bottom: 30px;
+}
+
+.grey-line {
+	width: 65%;
+	margin: auto;
+	border-top: 2px solid lightgrey;
+	z-index: 1;
+	text-align: center;
+	bottom: 30px;
+}
+
+.grey-line2 {
+	height: 95%;
+    border-left: 2px solid lightgrey;
+    margin: 0 10%;
+}
+
+h3 {
+	margin: 20px
+	font-size: 12px;
+}
+
+.light-weight-name {
+    font-weight: 200;
+}
+
+main {
+	border: 1px solid black;
+	display: flex;
+}
+
+.left-column {
+	background-color: #f7f7f7;
+	color: #6e6e6e;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+}
+
+.right-column {
+	background-color: #D0D2D3;
+	color: #6e6e6e;
+	border-left: 2px solid grey;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
+}
+
+
+.light-weight-range {
+	font-weight: 300;
+}
+
+input {
+	margin-top: 5px;
+	height: 20px;
+	width: 95%;
+}
+
+#show-min-range,
+#show-max-range {
+	text-decoration: underline;
+
+}
+
+.form-range,
+.challenger-1-info,
+.challenger-2-info {
+	display: flex;
+	margin: 0px;
+}
+
+.form-range {
+	flex-direction: row;
+	margin: 0px;
+}
+
+.box-form-name,
+.box-form-guess{
+	display: flex;
+	flex-direction: column;
+}
+
+.box-form-name {
+	flex: 2;
+}
+
+.box-form-guess {
+	flex:1;
+}
+
+
+
+#update-range{
+	margin-left: 20px;
+	align-self: flex-end;
+}
+
+#update-range,
+#button-submit-guess,
+#button-reset-game,
+#button-clear-game {
+	background-color: #6e6e6e;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 10px 40px;
+	border: none;
+	border-radius: 32px;
+	margin-top: 20px;
+	margin-left: 0;
+}
+
+#update-range:hover{
+  background-color: #dd1972;
+}
+
+#button-submit-guess:hover{
+  background-color: #dd1972;
+}
+
+#button-reset-game:hover{
+  background-color: #dd1972;
+}
+
+#button-clear-game:hover{
+  background-color: #dd1972;
+}
+
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: #d0d2d3;
+}
+
+#update-range,
+#button-submit-guess,
+#button-reset-game,
+#button-clear-game {
+	background-color: #6e6e6e;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 10px 40px;
+	border: none;
+	border-radius: 32px;
+}
+
+.buttons {
+	display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+}
+
+.score-card {
+	display: flex;
+	align-items: flex-end;
+	width: 90%;
+	justify-content: center;
+
+
+}
+
+.range-card,
+.challenger-guess,
+.score-card {
+	width: 90%;
+	height: auto;	
+	background-color: #ffffff;
+	border: 2px solid lightgrey;
+	margin: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.range-card {
+	padding-bottom: 20px;
+}
+
+
+
+.winning-card, 
+.testing {
+	width: 90%;
+	height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+	background-color: #fff;
+/*	border: 2px solid grey;*/
+}
+
+.border {
+	border: 2px solid grey;
+}
+
+.bottom-winning-card {
+	display: flex;
+	justify-content: space-around;	
+}
+
+.closing-button {
+	cursor: pointer;
+	margin-top: 15px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 2px solid #5f5f5f;
+	background-color: grey;
+	color: lightgrey;
+}
+
+.closing-button:hover {
+	background: #bbb;
+}
+
+#minimum-range,
+#maximum-range {
+	width: 90%;
+}
+
+.min-error-range,
+.max-error-range,
+.name1-error,
+.name2-error,
+.guess1-error,
+.guess2-error {
+	border: 1px solid #DD1972;
+}
+
+
+.min-error,
+.max-error,
+.guess-error-number1,
+.guess-error-number2,
+.name-error1,
+.name-error2 {
+	flex-wrap: wrap;
+	font-size: 15px;
+	color: #DD1972;
+
+}
+
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 80px;
+    font-weight: 800;
+}
+
+/*// ----------- //*/
+
+@media screen and (max-width: 1224px) {
+
+
+header {
+	display: flex;
+	background-color: #404041;
+	height: auto;
+	align-items: center;
+	flex-direction: column
+
+}
+
+h1 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	margin: 10px 0 0;
+
+}
+
+label {
+	margin-top: 20px;
+}
+
+
+h2.sub-title {
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: lighter;
+	margin: 0 0 10px;
+}
+
+p {
+	text-align: center;
+	margin-top: 50px;
+
+}
+
+h3 {
+	margin: 20px
+}
+
+.light-weight-name {
+    font-weight: 200;
+}
+
+main {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+.left-column {
+	flex-direction: row;
+	justify-content: center;
+/*	align-content: space-around;*/
+}
+
+.right-column {
+	background-color: #D0D2D3;
+	color: #6e6e6e;
+	border-left: 2px solid grey;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+/*	align-content: space-around;*/
+}
+
+.range-card,
+.challenger-guess,
+.score-card {
+	display: flex;
+	flex-flow: column;
+	width: 95%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.score-card {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+
+}
+
+
+
+.light-weight-range {
+	font-weight: 300;
+}
+
+
+form {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+input {
+	margin-top: 20px;
+	width: 100%;
+	height:20px;
+}
+
+#show-min-range,
+#show-max-range {
+	text-decoration: underline;
+
+}
+
+
+
+.form-range,
+.challenger-1-info,
+.challenger-2-info {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+
+
+.form-range {
+	justify-content: space-between;
+}
+
+
+#update-range:hover{
+  background-color: #dd1972;
+}
+
+#button-submit-guess:hover{
+  background-color: #dd1972;
+}
+
+#button-reset-game:hover{
+  background-color: #dd1972;
+}
+
+#button-clear-game:hover{
+  background-color: #dd1972;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	align-self: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 10px;
+}
+
+#update-range {
+    width: 80%;
+    align-self: center;
+    
+}
+
+.section-1-winning-card {
+	justify-content: space-between;
+}
+
+
+.latest-score-left,
+.latest-score-right {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+.winning-card {
+	display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2{
+	font-size: 40px;
+}
+
+
+
+.bottom-winning-card {
+	display: flex;
+	justify-content: space-around;	
+}
+
+.error-number {
+	display: block;
+}
+
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	font-weight: 500;
+	font-size: 50px;
+}
+
+
+
+
+@media screen and (max-width: 815px) {
+
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.frame {
+	height: auto;
+	width: 100%;
+	background-color: white;
+	border: 0px;
+	box-sizing: border-box;
+}
+
+.circle {
+	display: none;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 2px solid #5f5f5f;
+	margin-left: 16px;
+	margin-top: 20px;
+	margin-bottom: 22px;
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: green;
+}
+
+header {
+	display: flex;
+	background-color: #404041;
+	height: auto;
+	align-items: center;
+	flex-direction: column
+
+}
+
+
+
+h2.sub-title {
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: lighter;
+	margin: 0 0 10px;
+}
+
+
+h3 {
+	margin: 20px
+}
+
+.light-weight-name {
+    font-weight: 200;
+}
+
+main {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.range-card,
+.challenger-guess,
+.score-card {
+	display: flex;
+	flex-flow: column;
+	width: 85%;
+	height: auto;
+	background-color: #fff;
+	border: 2px solid lightgrey;
+	text-align: center;
+}
+
+.light-weight-range {
+	font-weight: 300;
+}
+
+
+form {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+}
+
+input {
+	margin-top: 20px;
+	width: 100%;
+	height:20px;
+}
+
+
+
+#show-min-range,
+#show-max-range {
+	text-decoration: underline;
+
+}
+
+.form-range,
+.challenger-1-info,
+.challenger-2-info {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+
+}
+
+#update-range {
+    width: 80%;
+    align-self: center;
+    
+}
+
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	font-weight: 500;
+	font-size: 20px;
+
+
+#update-range:hover{
+  background-color: #dd1972;
+}
+
+#button-submit-guess:hover{
+  background-color: #dd1972;
+}
+
+#button-reset-game:hover{
+  background-color: #dd1972;
+}
+
+#button-clear-game:hover{
+  background-color: #dd1972;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	align-self: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 10px;
+}
+
+
+.latest-score-left
+.latest-score-right {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.latest-score-left {
+	border-bottom: 1px solid lightgray;	
+}
+
+.right-column {
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.section-1-winning-card {
+	font-size: 100%;
+}
+
+
+
+.winning-card {
+	width: 95%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.error-number {
+	display: block;
+}
+
+
+
+
+
+
+@media screen and (max-width: 320px) {
+
+
+
+header {
+	display: flex;
+	background-color: #404041;
+	height: auto;
+	align-items: center;
+	flex-direction: column
+
+}
+
+h1 {
+	color: #DD1972;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 800;
+	margin: 10px 0 0;
+
+}
+
+
+h2.sub-title {
+	color: #ffffff;
+	font-size: 0.5rem;
+	font-weight: lighter;
+	margin: 0 0 10px;
+}
+
+
+
+h3 {
+	margin: 20px;
+	font-size: 1rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+.light-weight-name {
+    font-weight: 200;
+}
+
+main {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+#update-range {
+    margin-top: 5px;
+    margin-left: 0;
+    font-size: 100%;
+    text-align: center;
+}
+
+.buttons {
+	font-size: 100%;
+}
+
+
+#most-recent-guess-1,
+#most-recent-guess-2 {
+	font-size: 20px;
+}
+
+.light-weight-range {
+	font-weight: 300;
+}
+
+
+form {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+
+}
+
+.winning-card {
+	width: 100%;
+	height: auto;
+}
+=======
 	}*/
 
 	header {
@@ -790,6 +1611,7 @@ body {
 					width: 100%;
 					height: auto;
 				}
+
 
 
 
